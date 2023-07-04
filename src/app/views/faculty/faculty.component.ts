@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
-import * as facultyList from '../../data-entries/json/faculty.json';
+import {facultyData} from '../../../data-entries/json/faculty';
+
+
+
 @Component({
   selector: 'app-faculty',
   templateUrl: './faculty.component.html',
   styleUrls: ['./faculty.component.scss']
 })
+
 export class FacultyComponent {
-  facultyList = facultyList;
+  data: any = facultyData;
+
 }

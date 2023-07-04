@@ -1,7 +1,15 @@
-<div *ngfor="let row of facultyList">
-  <div class="card">
-    <img [src]='row.imgSrc'/>
-    <h1>{{row.name}}</h1>
-    <h3>{{row.department}}</h3>
+<div class="">
+  <div class="row container m-auto center">
+    <ng-container *ngFor="let row of data" >
+      <div class="card col-md-2 col-sm-1 mx-1 p-1 shadow-lg mb-2" >
+        <img class="card-img-top" [src]="row.imgSrc"/>
+        <h4 class="card-title">{{row.name}}</h4>
+          <div class="card-body">
+            <h6 class="card-text">{{row.department}}</h6>
+            <h6 class="card-text">{{row.phoneNo }}</h6>
+            <h6 class="card-text">{{row.email}}</h6>
+          </div>
+      </div>
+    </ng-container>
   </div>
 </div>
