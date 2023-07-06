@@ -1,53 +1,66 @@
 <!--  ---------NavBar-----------  -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"> <img src="../assets/images/logo-icwar.png" width="50" height="40" class="d-inline-block align-top" alt="">
-    ICWaR
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="p-1 navbar navbar-expand-lg navbar-light" style="background-color: rgba(128, 184, 184, 0.57);font-family:sans-serif;">
+  <div class="container-fluid">
+    <a style="font-family:Numans;" class="navbar-brand" href="#"><img src="../assets/images/logo-icwar.png" width="100" height="45" class="d-inline-block align-top shadow-lg" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item ">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/research">Research</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/faculty">Faculty</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/faculty">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/faculty">People</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/faculty">Contact Us</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Faculty</a>
-          <a class="dropdown-item" href="#">Visitors</a>
-          <a class="dropdown-item" href="#">Research Stuents</a>
-          <a class="dropdown-item" href="#">Post Doctoral Scholars</a>
-          <a class="dropdown-item" href="#">Project Staff</a>
-          <a class="dropdown-item" href="#">Office Staff</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <span style="width:60vw;"></span>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="text-shadow: 1px 1px 1px white;">
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/research">Research</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a  class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              People
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgba(240, 248, 255, 0.054);border: none;color: pink;">
+              <a class="dropdown-item " href="/faculty">Faculty</a>
+              <a class="dropdown-item " href="*">Visitors</a>
+              <a class="dropdown-item " href="*">Research Stuents</a>
+              <a class="dropdown-item " href="*">Post Doctoral Scholars</a>
+              <a class="dropdown-item " href="*">Project Staff</a>
+              <a class="dropdown-item " href="*">Office Staff</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact-us">Contact Us</a>
+          </li>
+<li class="search-container">
+  <form action="/search" method="get">
+    <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+    <label class="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+  </form>
+<!-- </div> -->
+</li>
+        </ul>
+    </div>
   </div>
 </nav>
 <!--  --------------------  -->
-<router-outlet class="container"></router-outlet>
+<router-outlet></router-outlet>
+
+<!-- ---------Footer -------------- -->
+<footer class="p-lg-5 text-white" style="background-color: #333333;">
+  <div class="row-cols-md-3 row-cols-sm-1 row text-center">
+    <iframe class ="col m-sm-n1" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15549.240409869766!2d77.5682368!3d13.0159138!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6a432b714a8f5510!2sInterdisciplinary%20Centre%20For%20Water%20(ICWaR)!5e0!3m2!1sen!2sin!4v1635187430526!5m2!1sen!2sin"></iframe>
+    <span class="col m-sm-n1" style="vertical-align: bottom;"><img  width="30%" src="../assets/images/logo-icwar.png" class="d-inline-block align-top shadow-lg" alt=""></span>
+    <span class="col m-sm-n1">
+    <ul class="nav col-md-3 col-sm-1">
+      <li class="nav-item text-white"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+    </ul>
+    </span>
+</div>
+</footer>
