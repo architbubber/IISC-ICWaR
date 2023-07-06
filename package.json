@@ -4,7 +4,7 @@
   "description": "WebApp for ICWaR IISC",
   "author": "Archit Buber",
   "homepage": "https://www.icwar.iisc.ac.in",
-  "copyright":"ICWaR",
+  "copyright": "ICWaR",
   "license": "IISC",
   "scripts": {
     "ng": "ng",
@@ -23,9 +23,7 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
-    "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.4.1",
     "ngx-bootstrap": "^10.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
