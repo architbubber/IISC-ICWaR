@@ -1,0 +1,14 @@
+.scroll-container {
+  text-align: right;
+  transform: translateX(-100%);
+  animation: my-animation 15s linear infinite;
+}
+
+@keyframes my-animation {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
