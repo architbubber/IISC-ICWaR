@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
 import { FacultyComponent } from './views/faculty/faculty.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { CarouselModule } from 'primeng/carousel';
+import { AboutUsComponent } from './views/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CarouselModule } from 'primeng/carousel';
     HomepageComponent,
     PageNotFoundComponent,
     FacultyComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
