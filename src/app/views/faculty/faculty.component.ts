@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import {facultyData} from '../../../data-entries/json/faculty';
+import { Component, Injectable,ɵConsole } from '@angular/core';
+import { facultyData } from '../../../data-entries/json/faculty';
 
-
+@Injectable()
 
 @Component({
   selector: 'app-faculty',
@@ -11,5 +11,4 @@ import {facultyData} from '../../../data-entries/json/faculty';
 
 export class FacultyComponent {
   data: any = facultyData;
-
 }

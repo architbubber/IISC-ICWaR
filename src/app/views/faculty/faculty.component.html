@@ -1,15 +1,18 @@
-<div class="">
-  <div class="row container m-auto center">
-    <ng-container *ngFor="let row of data" >
-      <div class="card col-md-2 col-sm-1 mx-1 p-1 shadow-lg mb-2" >
-        <img class="card-img-top" [src]="row.imgSrc"/>
-        <h4 class="card-title">{{row.name}}</h4>
-          <div class="card-body">
-            <h6 class="card-text">{{row.department}}</h6>
-            <h6 class="card-text">{{row.phoneNo }}</h6>
-            <h6 class="card-text">{{row.email}}</h6>
+<div class="container justify-content-center bg-light">
+  <div class="row row-cols-md-4 row-cols-sm-1 justify-content-center">
+    <ng-container *ngFor="let parent of data">
+      <h1>Chairman</h1>
+      <ng-container *ngFor="let row of data.parent">
+      <div class="card col-md-2 m-1 " style="box-shadow: 1px 1px 10px 1px black;" >
+        <img class="p-1 card-img card-img-top shadow"  [src]="row.imgSrc"/>
+        <h4 class="card-title card-header" style="font-size: small;font-weight: bold;">{{row.name}}</h4>
+          <div class="card-body" >
+            <h6 class="card-text" style="font-size: smaller;">{{row.department}}</h6>
+            <h6 class="card-text " style="font-size: smaller;">{{row.phoneNo }}</h6>
+            <h6 class="card-text"  style="font-size: smaller;">{{row.email}}</h6>
           </div>
       </div>
+    </ng-container>
     </ng-container>
   </div>
 </div>

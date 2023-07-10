@@ -1,6 +1,5 @@
 
-
-[{
+export const newsJson = [{
   "title":"Monsoon School on Urban Floods, 07-12 August 2023",
   "date":"12/07/2023",
   "imgSrc":"../../assets/images/news/Brochure_Monsoon-School-2023.jpg"

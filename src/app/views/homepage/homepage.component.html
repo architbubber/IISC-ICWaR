@@ -1,35 +1,60 @@
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="top:0">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
   <div class="carousel-inner">
-
-    <div class="carousel-item active" >
-      <img class="d-block w-100" [src]="slides[0]" >
+    <div class="carousel-item active" data-bs-interval="2500">
+      <img class=" d-block w-100" [src]="slides[0]" >
+      <div class="card-img-overlay overlay-dark"></div>
     </div>
-    <div class="carousel-item " >
-      <img class="d-block w-100" [src]="slides[1]" >
+    <div class="carousel-item" data-bs-interval="2500">
+      <img class=" d-block w-100" [src]="slides[1]" >
+      <div class="card-img-overlay overlay-dark"></div>
     </div>
-    <div class="carousel-item " >
-      <img class="d-block w-100" [src]="slides[2]" >
+    <div class="carousel-item" data-bs-interval="2500">
+      <img class=" d-block w-100" [src]="slides[2]" >
+      <div class="card-img-overlay overlay-dark"></div>
     </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  </a>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
 <div class="p-2" style="height: 2.1em;background-color: rgb(193, 58, 58);overflow: hidden;">
-  <div class="scroll-container">
-  This is scrolling text.
+  <div class="scroll-container " style="word-break: keep-all;line-clamp: 1;">
+    Assisting government organizations, the public sector and communities in battling the climate change impact on water resources.*
+Developing efficient and affordable water remediation techniques to ensure adequate clean drinking water.*
+Becoming a global leader in water research, by creating an interdisciplinary research environment and training next-generation water scientists.*
+Providing state of the art solutions to complex problems in water research such as urban floods, contamination due to heavy metals and watershed management by developing science-based technological solutions.
 </div>
 </div>
-
-<section class="container-fluid p-5 bg-light">
-  <div class="row p-5">
+<!-- Popular Visited -->
+<div class="row p-4 " style="max-width: 100vw;">
+  <!-- <h3 style="text-align: center;">Highlights</h3> -->
+    <ng-container *ngFor="let slide of newsJson; let index=index" >
+      <div *ngIf="index<4" class="card table-h shadow-lg shadow border border-1 border-dark border border-1 m-4 col" [ngStyle]="{'height':screenWidth>786? '150px':'50px'}" [ngStyle]="{'width':screenWidth>786?'250px':'150px'}" >
+        <div class="card-body">
+          <span class="card-title" style="-webkit-box-orient: vertical;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+        ">{{slide.title}}</span>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <!-- Chairman message -->
+<section class="container-fluid p-md-5 mt-sm-2 bg-light">
+  <div class="row p-md-5">
     <div class="col">
       <h3>Chairman's Message</h3>
       <br />
@@ -40,30 +65,43 @@
     </div>
   </div>
 </section>
-
-<!-- News Carousel -->
-
-<div class="m-2 p-2 card-deck">
-  <p-carousel [value]="images"
-    [numVisible]="3"
-    [numScroll]="1"
-    [autoplayInterval]="2500"
-    [circular]="true"
-    [showIndicators]="false"
-    [showNavigators]="false">
-    <ng-template let-image pTemplate="item">
-      <div class="card mx-5">
-        <img src="{{image.picture}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{image.random}}</h5>
-          <div class="date-post">
-            <span class="numb">18</span>
-            <span>May</span>
+    <!----------  ---------------------------- News Component ---------------------------  --------->
+<div class="container py-5 justify-content-center text-center" >
+  <h4>Seminars</h4>
+  <div class="m-2 card-deck">
+    <p-carousel [value]="news"
+      [numVisible]="screenWidth<768?1:screenWidth<1200?2:3"
+      [numScroll]="1"
+      [autoplayInterval]="2500"
+      [circular]="true"
+      [showIndicators]="false"
+      [showNavigators]="false">
+      <ng-template let-news pTemplate="item">
+        <div class="card mx-5">
+          <img src="{{news.src}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="card-title row-cols-2 row px-1"  style="vertical-align: middle;">
+              <span class="col ps-3 pt-2" style="border:3px solid rgb(216, 193, 61);width: 70px;height: 80px;"><h3>18</h3><h6>May</h6></span>
+              <h5 class="col">{{news.title}}</h5>
+            </div>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
         </div>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </ng-template>
-  </p-carousel>
+      </ng-template>
+    </p-carousel>
+  </div>
 </div>
-
+<div class="container-fluid bg-light p-5">
+  <h4>Vision and Mission</h4>
+  <div class="text-body line" [style.line-height]="screenWidth<786?'20px':'40px'">
+    The mission of ICWaR, is to be a global leader in providing integrated solutions for Water Hazard and Risk Management/ Risk Reduction to improve the quality of life of the Communities.
+    <br>
+    Our vision is to provide advanced science and technology solutions to the critical issues related to urban floods, riverine floods, water pollution, climate change impacts, and integrated water resources management at different levels with a multi-disciplinary approach, through;<br>
+    <ol>
+      <li>Assisting government organizations, the public sector and communities in battling the climate change impact on water resources.</li>
+      <li>Developing efficient and affordable water remediation techniques to ensure adequate clean drinking water.</li>
+      <li>Becoming a global leader in water research, by creating an interdisciplinary research environment and training next-generation water scientists.</li>
+      <li>Providing state of the art solutions to complex problems in water research such as urban floods, contamination due to heavy metals and watershed management by developing science-based technological solutions.</li>
+    </ol>
+  </div>
+</div>
