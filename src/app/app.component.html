@@ -1,12 +1,13 @@
 <!--  ---------NavBar-----------  -->
-<nav class="navbar navbar-expand-lg navbar-light ps-3" >
-  <!-- <div class="container-fluid d-inline"> -->
-  <a class="navbar-brand float-left" href="#"><img src="../assets/images/logo-icwar.png" class="w-25 shadow border border-2 border-light " style="border-radius: 5px;"></a>
-  <div class="w-25 d-sm-block d-md-none "></div>
-  <button class="navbar-toggler float-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div style="width:30vw" class="d-sm-none d-md-inline"></div>
+<nav class="navbar navbar-expand-lg navbar-light ps-1" >
+  <div [ngClass]="screenWidth<786?'d-inline-flex':'container-fluid'">
+    <a class="float-left" href="#"><img src="../assets/images/logo-icwar.png" class="w-25 shadow border border-2 border-light " style="border-radius: 5px;"></a>
+    <div class="w-25 d-sm-none d-md-block "></div>
+    <button class="navbar-toggler float-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <!-- <div style="width:30vw" class="d-sm-none d-md-inline"></div> -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent" >
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -42,7 +43,6 @@
         </li> -->
       </ul>
   </div>
-<!-- </div> -->
 </nav>
 <!--  --------------------  -->
 <router-outlet></router-outlet>
