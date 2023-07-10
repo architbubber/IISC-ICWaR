@@ -1,11 +1,13 @@
-export const facultyData = [{
+export const facultyData = [
+  {"Chairman":[{
   "name":"Dr. Praveen C Ramamurthy",
   "designation":"chairman",
   "department":"Department of Materials Engineering",
   "phoneNo":"+91 080 2293 2627",
   "email":"praveen@iisc.ac.in",
   "imgSrc":"../../assets/images/img_avatar3.png"
-},
+}]},
+{"Core":[
 {
   "name":"Dr. Rajarshi Das Bhowmik",
   "designation":"Assistant Professor",
@@ -21,8 +23,9 @@ export const facultyData = [{
   "phoneNo":"",
   "email":"bramha@iisc.ac.in",
   "imgSrc":"../../assets/images/img_avatar3.png"
-},
-{
+}
+]},
+{"Other":[{
   "name":"Prof. P. P. Mujumdar",
   "designation":"Associate Faculty",
   "department":"Department of Civil Engineering",
@@ -125,4 +128,6 @@ export const facultyData = [{
   "phoneNo":"",
   "email":"",
   "imgSrc":"../../assets/images/img_avatar3.png"
-}]
+}
+]}
+]
