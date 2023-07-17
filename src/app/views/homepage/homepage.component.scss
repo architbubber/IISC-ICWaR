@@ -1,12 +1,18 @@
 .scroll-container {
   white-space: nowrap;
-  animation: my-animation 4s linear infinite;
-
+  animation: my-animation 5s linear infinite;
+  font-size: large;
   display: flex;
   position: relative;
   justify-content: flex-start;
   transition: all 2s ease;
   transform: scale(2);
+}
+.card-hover:hover{
+  box-shadow: -1px -1px 10px 1px black;
+}
+.card-hover{
+  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.421);
 }
 
 
@@ -21,4 +27,10 @@
 
 .overlay-dark {
   background-color: rgba(black, 0.4);
+}
+
+::ng-deep .p-carousel .p-carousel-content .p-carousel-prev,
+::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
+  background-color: transparent;
+  max-width:0.5vw ;
 }

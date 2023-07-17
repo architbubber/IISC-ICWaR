@@ -1,8 +1,8 @@
-<div class="container justify-content-center bg-light">
+<!-- <div class="container justify-content-center bg-light">
   <div class="row row-cols-md-4 row-cols-sm-1 justify-content-center">
-    <ng-container *ngFor="let parent of data">
-      <h1>Chairman</h1>
-      <ng-container *ngFor="let row of data.parent">
+    <ng-container *ngFor="let parent of faculty;index as i">
+      <h1>{{parent.Chairman}}</h1>
+      <ng-container *ngFor="let row of parent " >
       <div class="card col-md-2 m-1 " style="box-shadow: 1px 1px 10px 1px black;" >
         <img class="p-1 card-img card-img-top shadow"  [src]="row.imgSrc"/>
         <h4 class="card-title card-header" style="font-size: small;font-weight: bold;">{{row.name}}</h4>
@@ -15,4 +15,4 @@
     </ng-container>
     </ng-container>
   </div>
-</div>
+</div> -->

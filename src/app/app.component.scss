@@ -1,7 +1,9 @@
 .nav-item{
   margin-inline: 10px;
 }
-
+.text-muted{
+  color: rgba(248, 242, 242, 0.442)!important
+}
 
 /////////////////////
 .button {
@@ -100,4 +102,14 @@
 
 .expandright:focus {
 	padding: 0 0 0 16px;
+}
+.dropdown-item{
+  color: white;
+  text-shadow: none;
+}
+.nav-item > .nav-link{
+  color:#fff;
+}
+.dropdown-item:hover{
+  background-color: rgba(210, 180, 140, 0.833);
 }

@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import * as data from '../../../data-entries/json/homepage.json';
-import { newsJson} from '../../../data-entries/json/news';
+import { newsJson } from '../../../data-entries/json/news';
+import 'jquery';
+import { News } from './homepage.service';
+
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss']
 })
-
 export class HomepageComponent {
-  newsJson =  newsJson;
+  public newsJsonProcessed: any;
   public news :any;
   public  data = data;
   public screenWidth: any;
@@ -27,6 +30,8 @@ export class HomepageComponent {
   ngOnInit(): void {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+    this.newsJsonProcessed = newsJson;
+    console.log(this.newsJsonProcessed[0].title)
     // console.log(newsJson[0])
     // newsJson.forEach(f=>{
     //   this.news.push(new newsArray(f.imgSrc,f.date,f.title));

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,10 +8,10 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { CarouselModule } from 'primeng/carousel';
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { facultyData } from '../data-entries/json/faculty';
 
 
 import { AboutUsComponent } from './views/about-us/about-us.component';
+import { ResearchComponent } from './views/research/research.component';
 
 @NgModule({
   declarations: [
@@ -19,15 +19,15 @@ import { AboutUsComponent } from './views/about-us/about-us.component';
     HomepageComponent,
     PageNotFoundComponent,
     ContactUsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ResearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarouselModule,
+    CarouselModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
-console.log(facultyData)

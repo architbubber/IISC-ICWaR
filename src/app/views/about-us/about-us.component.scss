@@ -1,14 +1,12 @@
 .bg-img{
   background-size: cover;
   color: #ffffff;
-  height: 80vh;
   text-shadow: 2px 2px 2px rgba(0,0,0,4);
 }
 .color-overlay{
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,.5);
-
 }
 .h1{
   animation: fade 3s;
@@ -23,24 +21,41 @@ h1{
   h1{
     font-size: calc(1.0rem + 3.0vw);
   }
-}
-@keyframes fade{
-  0%{
-    opacity: 0;
-    margin-top: 50px;
-
+  .h-sm-70{
+    height: 80vh;
   }
-  100%{
-    opacity: 1;
-    margin-top: 0px;
+  .px-sm-5{
+    padding-left: 55px;
+    padding-right: 55px;
   }
 }
 @keyframes increase{
   0%{
-  height: 1vh
-
+    height: 1vh
   }
   100%{
-    height: 80vh;
+    height: 75vh;
+  }
+}
+.length-animation  {
+  animation: increase  3s forwards;
+}
+.text-fade-moveUp{
+  animation: text-fade-moveUp 3s forwards;
+  margin-top: 100px;
+}
+
+@keyframes text-fade-moveUp {
+  from{
+    opacity: 0;
+  }
+  to{
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  .h-sm-70{
+    height: 70vh;
   }
 }

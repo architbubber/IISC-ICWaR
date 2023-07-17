@@ -1,4 +1,4 @@
-export const facultyData = [
+export const faculty = [
   {"Chairman":[{
   "name":"Dr. Praveen C Ramamurthy",
   "designation":"chairman",

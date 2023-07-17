@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+// import 'jquery'
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
