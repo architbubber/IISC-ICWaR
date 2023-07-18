@@ -1,42 +1,6 @@
-import { Component, Injectable, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { faculty } from 'src/data-entries/json/faculty';
-
-// import  * as facultyData from '../../../data-entries/json/faculty.json';
-Injectable()
-
-export interface FacultyData {
-  Chairman : FacultyInfo[];
-  Core :FacultyInfo[];
-  Other : FacultyInfo[];
-  // constructor(Chairman : FacultyInfo[],
-  // Core :FacultyInfo[],
-  // Other : FacultyInfo[]){
-  //   this.Chairman = Chairman;
-  //   this.Core = Core;
-  //   this.Other = Other;
-  // }
-}
-export interface FacultyInfo {
-  name:string;
-  designation:string
-  department:String
-  phoneNo:String
-  email:String
-  imgSrc:String
-  // constructor(  name:String,    designation:String,
-  //   department:String,
-  //   phoneNo:String,
-  //   email:String,
-  //   imgSrc:String){
-  //     this.department = department;
-  //     this.designation=designation;
-  //     this.email = email;
-  //     this.imgSrc = imgSrc;
-  //     this.name = name;
-  //     this.phoneNo = phoneNo;
-  //   }
-
-}
 
 @Component({
   selector: 'app-faculty',
@@ -46,23 +10,39 @@ export interface FacultyInfo {
 
 export class FacultyComponent {
 
+  constructor(private route: ActivatedRoute){
+  }
   designationNames: string[]=[];
   staffUnderDesignation : FacultyInfo[][]=[];
-  ngOnInit(): void {
-    for(var i=0;i<faculty.length;i++){
-      let key = Object.keys(faculty[i])[0];
-      this.designationNames.push(key);
-      // console.log(Object.values(faculty[i])[])
-      let c  = Object.values(faculty[i]);
-     this.staffUnderDesignation.push(c[0]);
-   }
-  //  this.staffUnderDesignation.forEach(f=>{
-  //   f.forEach(r=>
-  //     console.log(r);
-  //   )
-  //  })
-  }
-    // console.log(this.designationNames)
 
+  ngOnInit(): void {
+    let filterBy = this.route.snapshot.queryParamMap.get('filterBy');
+    this.processFacultyDataForRendering(filterBy?.toString());
+  }
+
+  processFacultyDataForRendering(filterBy:any){
+
+    console.log(filterBy)
+    for(var i=0;i<faculty.length;i++){
+
+      let key = Object.keys(faculty[i])[0];
+
+      if(filterBy==null || filterBy=='all'|| key==filterBy){
+        this.designationNames.push(key);
+        let c  = Object.values(faculty[i]);
+        this.staffUnderDesignation.push(c[0]);
+      }
+
+    }
+
+  }
 }
-// var processd : FacultyData[] ;
+
+interface FacultyInfo {
+  name:string;
+  designation:string
+  department:String
+  phoneNo:String
+  email:String
+  imgSrc:String
+}
