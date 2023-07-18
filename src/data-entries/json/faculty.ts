@@ -142,76 +142,56 @@ export const faculty = [
 ];
 export const researchStudents = [
   {
-    Chairman: [
-      {
-        name: "Dr. Praveen C Ramamurthy",
-        designation: "chairman",
-        department: "Department of Materials Engineering",
-        phoneNo: "+91 080 2293 2627",
-        email: "praveen@iisc.ac.in",
-        imgSrc: "../../assets/images/img_avatar3.png",
-      },
-    ],
+    name: "Dr. Praveen C Ramamurthy",
+    designation: "chairman",
+    department: "Department of Materials Engineering",
+    phoneNo: "+91 080 2293 2627",
+    email: "praveen@iisc.ac.in",
+    imgSrc: "../../assets/images/img_avatar3.png",
   }
 ];
 
 export const visitors = [
   {
-    Chairman: [
-      {
-        name: "Dr. Praveen C Ramamurthy",
-        designation: "chairman",
-        department: "Department of Materials Engineering",
-        phoneNo: "+91 080 2293 2627",
-        email: "praveen@iisc.ac.in",
-        imgSrc: "../../assets/images/img_avatar3.png",
-      },
-    ],
+    name: "Dr. Praveen C Ramamurthy",
+    designation: "chairman",
+    department: "Department of Materials Engineering",
+    phoneNo: "+91 080 2293 2627",
+    email: "praveen@iisc.ac.in",
+    imgSrc: "../../assets/images/img_avatar3.png",
   }
 ];
 
 export const postDoctoralScholars = [
   {
-    Chairman: [
-      {
-        name: "Dr. Praveen C Ramamurthy",
-        designation: "chairman",
-        department: "Department of Materials Engineering",
-        phoneNo: "+91 080 2293 2627",
-        email: "praveen@iisc.ac.in",
-        imgSrc: "../../assets/images/img_avatar3.png",
-      },
-    ],
+    name: "Dr. Praveen C Ramamurthy",
+    designation: "chairman",
+    department: "Department of Materials Engineering",
+    phoneNo: "+91 080 2293 2627",
+    email: "praveen@iisc.ac.in",
+    imgSrc: "../../assets/images/img_avatar3.png",
   }
 ];
 
 export const projectStaff = [
   {
-    Chairman: [
-      {
-        name: "Dr. Praveen C Ramamurthy",
-        designation: "chairman",
-        department: "Department of Materials Engineering",
-        phoneNo: "+91 080 2293 2627",
-        email: "praveen@iisc.ac.in",
-        imgSrc: "../../assets/images/img_avatar3.png",
-      },
-    ],
+    name: "Dr. Praveen C Ramamurthy",
+    designation: "chairman",
+    department: "Department of Materials Engineering",
+    phoneNo: "+91 080 2293 2627",
+    email: "praveen@iisc.ac.in",
+    imgSrc: "../../assets/images/img_avatar3.png",
   }
 ];
 
 export const officeStaff = [
   {
-    Chairman: [
-      {
-        name: "Dr. Praveen C Ramamurthy",
-        designation: "chairman",
-        department: "Department of Materials Engineering",
-        phoneNo: "+91 080 2293 2627",
-        email: "praveen@iisc.ac.in",
-        imgSrc: "../../assets/images/img_avatar3.png",
-      },
-    ],
+    name: "Dr. Praveen C Ramamurthy",
+    designation: "chairman",
+    department: "Department of Materials Engineering",
+    phoneNo: "+91 080 2293 2627",
+    email: "praveen@iisc.ac.in",
+    imgSrc: "../../assets/images/img_avatar3.png",
   }
 ];
 
