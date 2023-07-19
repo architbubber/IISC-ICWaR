@@ -8,7 +8,7 @@ import { ResearchComponent } from './views/research/research.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
-  {path: 'faculty',loadChildren:()=>import('./views/faculty/faculty.module').then(m=>m.FacultyModule)},
+  {path: 'people',loadChildren:()=>import('./views/people/people.module').then(m=>m.PeopleModule)},
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'research', component: ResearchComponent},

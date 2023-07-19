@@ -8,13 +8,8 @@ export class HomepageService {
   constructor() { }
 }
 
-export class News{
+export interface News{
   title: string;
   date: string;
   imgSrc: string;
-  constructor(title:string,date:string,imgSrc:string){
-    this.title =title;
-    this.date = date;
-    this.imgSrc=imgSrc;
-  }
 }

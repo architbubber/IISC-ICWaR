@@ -32,7 +32,7 @@ export const faculty = [
     ],
   },
   {
-    'Associate & DST': [
+    'Associate and DST': [
       {
         name: "Prof. P. P. Mujumdar",
         designation: "Associate Faculty",

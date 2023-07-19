@@ -5,23 +5,22 @@
       <span class="col-md-1 d-sm-none d-md-block d-none" style="height: 80vh;">
         <div class="length-animation" style="width:1px;background-color:white;"></div>
       </span>
-      <h4 class="col-md-4 col-sm-12 text-fade-moveUp" style="margin-top: 150px;animation-delay: 1s;opacity: 0;" >Those who venture here—to learn, research, teach, work, and grow—join nearly four centuries of students and scholars in the pursuit of truth, knowledge, and a better world.
-      </h4>
+      <h4 class="col-md-4 col-sm-12 text-fade-moveUp" style="margin-top: 150px;animation-delay: 1s;opacity: 0;">{{aboutUsData.carouselDisplayLine}}</h4>
     </div>
   </div>
 </div>
 <!-- Facts -->
 <div class="text-center container-fluid">
   <div class="row p-5" style="color: rgb(10, 10, 107);">
-    <div class="col-sm-12 col-md-4 my-3 text-center"><h1>1741</h1>
+    <div class="col-sm-12 col-md-4 my-3 text-center"><h1>{{aboutUsData.publicationsCount}}</h1>
     <h2>Publications</h2></div>
-    <div class="col-sm-12 col-md-4 my-3 text-center"><h1>35</h1>
+    <div class="col-sm-12 col-md-4 my-3 text-center"><h1>{{aboutUsData.facultyCount}}</h1>
       <h2>Faculty & Staff</h2></div>
-    <div class="col-sm-12 col-md-4 my-3 text-center"><h1>280</h1>
-    <h2>Researches</h2></div>
+    <div class="col-sm-12 col-md-4 my-3 text-center"><h1>{{aboutUsData.budgetTillDate}}</h1>
+    <h2>Budget</h2></div>
   </div>
 </div>
-<hr style="height: 5px;">
+<hr class="mb-0" style="height: 5px;">
 <!-- More About -->
 <div class="p-md-5 pt-5 p-sm-2 bg-light container-fluid">
   <h1 class="header m-md-5 text-center">History</h1>
@@ -58,12 +57,12 @@ The increased awareness of climate change and its potential impacts on ecosystem
       <h1>Core Faculty</h1>
       <p>Dr. Bramha Dutt Vishwakarma<br>Dr. Rajarshi Das Bhowmik</p>
     </div>
-    <div class="col-sm-3 col-md-3 btn-block btn" onClick="window.location.href='/faculty?filterBy=Associate'; ">
+    <div class="col-sm-3 col-md-3 btn-block btn" onClick="window.location.href='/faculty?filterBy=Associate and DST'; ">
       <i [ngClass]="screenWidth>786?'fa-3x':'fa-2x'" class="fa fa-users" aria-hidden="true"></i>
       <h1>Associate Faculty</h1>
       <p>Click to View</p>
     </div>
-    <div class="col-sm-3 col-md-3 btn-block btn" onClick="window.location.href='/faculty?filterBy=Dst'; ">
+    <div class="col-sm-3 col-md-3 btn-block btn" onClick="window.location.href='/faculty?filterBy=Associate and DST'; ">
       <i [ngClass]="screenWidth>786?'fa-3x':'fa-2x'" class="fa fa-users" aria-hidden="true"></i>
       <h1>DST Inspire Faculty</h1>
       <p>Click to View</p>
