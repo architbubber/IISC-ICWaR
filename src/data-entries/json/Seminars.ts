@@ -2,6 +2,7 @@ export const seminars = [
   {
     'ICWaR Guest Seminar Series': [
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/Dr.-Gilles-Boulet.jpg",
         'title':"High resolution remote sensing data in eco-agro-hydrology: opportunities in the context of the CNES/ISRO TRISHNA mission",
         'Name of the speaker':'Dr. Gilles Boulet',
         'Title of the Seminar':'High resolution remote sensing data in eco-agro-hydrology: opportunities in the context of the CNES/ISRO TRISHNA mission',
@@ -11,6 +12,7 @@ export const seminars = [
         'Abstract':' In his talk, he will address what and how land surface water variables and fluxes can be retrieved from high resolution remote sensing data with current and future platforms such as TRISHNA, SBG or LSTM. This will be put in perspective with key questions such as the sustainable management of water resources at local an regional scales and the fire and drought risk assessment. He will bring also some concrete elements on the TRISHNA evapotranspiration and water stress products definition and algorithms, as well as the current and future corresponding cal/val activities.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/Jasmeet-Judge.png",
         'title':"Microwave and VIR remote sensing for soil moisture and crop phenology using AI",
         'Name of the speaker':' Dr. Jasmeet Judge',
         'Title of the Seminar':'Microwave and VIR remote sensing for soil moisture and crop phenology using AI',
@@ -20,6 +22,7 @@ export const seminars = [
         'Abstract':'Space-borne sensors provide global information for many valuable applications including agriculture and hydrology. New sensors and technological advances continue to improve spatial and temporal resolutions, further enhancing its value. This seminar will include two research projects conducted at the Center for Remote Sensing: the first, spatio-temporal scaling of microwave observations for soil moisture studies using AI. In this project, data-driven machine learning methods are used to merge data at microwave and other wavelengths to obtain high resolution soil moisture in agricultural regions. In the second project, remotely sensed VIR observations are integrated with physics-guided machine learning for estimating in-season crop phenology.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/Murray-Peel-2017.jpeg",
         'title':"Recent results from investigating annual rainfall-runoff relationship changes during the Millennium Drought in south-eastern Australia",
         'Name of the speaker':'Dr. Murray Peel',
         'Title of the Seminar':'Recent results from investigating annual rainfall-runoff relationship changes during the Millennium Drought in south-eastern Australia',
@@ -29,6 +32,7 @@ export const seminars = [
         'Abstract':'The Millennium Drought in south-eastern Australia (1997-2009 ) was a 13-year extended dry period during which unusual catchment responses were observed. In just over half of the catchments investigated a statistically significant downward shift in long-term annual rainfall-runoff relationship was observed. In those shifted catchments, a given amount of rainfall resulted in less runoff than expected during the drought. Furthermore, later research demonstrated that many of the shifted catchments had not recovered several years after the drought ended and they were still producing less runoff than expected. Here I present a summary of recent results from our investigations into shifted rainfall-runoff relationships and modelling of runoff during the Millennium Drought. The Millennium Drought is an observed case study of a prolonged dry period, potentially indicative of future conditions in south-eastern Australia, which has significant implications for long-term streamflow behavior and modelling of climate change runoff projections.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/eleanor-blyth.jpg",
         'title':"How the land resonates with the atmosphere: a manifesto for complexity in land models",
         'Name of the speaker':'Dr. Eleanor Blyth',
         'Title of the Seminar':'How the land resonates with the atmosphere: a manifesto for complexity in land models',
@@ -38,6 +42,7 @@ export const seminars = [
         'Abstract':'The land system responds to changes and drivers from the atmosphere in different ways around the planet. This is true of both the water and energy system as well as the carbon system. In this talk, we explore how this change can affect the weather and climate system and what that means in terms of how complex our models need to be.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/axel-kleidon.jpg",
         'title':"Working at the limit: How thermodynamics shapes the Earth system",
         'Name of the speaker':'Dr. Axel Kleidon',
         'Title of the Seminar':'Working at the limit: How thermodynamics shapes the Earth system',
@@ -47,6 +52,7 @@ export const seminars = [
         'Abstract':'Earth system processes perform work to maintain motion, cycles and metabolisms – an aspect that is not commonly considered.  In this talk I will show how thermodynamics plays a central role in the Earth system, determining how and how much work can be extracted from sunlight.  Work, in turn, is a major constraint on dynamics, from atmospheric motion to hydrologic cycling and the global biosphere.  I show that by maximizing work we can describe highly complex Earth system processes in a relatively simple way.  I use examples from the atmospheric circulation, hydrology and terrestrial ecosystems to illustrate this approach and its utility for Earth system science.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/yashavanth-kumar.jpg",
         'title':"Food Safety Standard Authority India Rules and Regulations for Packaged Drinking water",
         'Name of the speaker':'Dr. Yashavanth Kumar GS',
         'Title of the Seminar':'Food Safety Standard Authority India Rules and Regulations for Packaged Drinking water',
@@ -56,6 +62,7 @@ export const seminars = [
         'Abstract':'Packaged drinking water is both a need and a necessity in a country like India where most of the freshwater resources have a high contamination levels. We all are aware of multiple brands providing packaged drinking water, but are they following some standards and what are they? In this talk the regulations on packaged drinking water by the Food Safety Standard Authority of India (FSSI) will be discussed. More specifically: What are FSSI rules and regulations, how it works.  Guidelines for packaged drinking water and what are the water quality parameters.  FSSAI amended certain conditions for packaged drinking water. What are they?'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/rao-govindaraju.jpg",
         'title':"Contending with Uncertainty in Hydrologic Experiments Across Scales",
         'Name of the speaker':'Dr. Rao S. Govindaraju',
         'Title of the Seminar':'Contending with Uncertainty in Hydrologic Experiments Across Scales',
@@ -65,6 +72,7 @@ export const seminars = [
         'Abstract':'Hydrologic modeling efforts have to contend with several types of uncertainties. Measurement uncertainties exist because of errors in measurements of state variables, while structural uncertainties result from errors in the mathematical representation of hydrologic processes. Further, parametric uncertainties arise from both measurement and structural uncertainties, and because of limited information in the available data. Despite its ubiquitous nature, uncertainty quantification is not addressed often because of (i) lack of good algorithms, and (ii) inability to separate the various forms of uncertainty through calibration exercises. In this regard, Dr. Govindaraju will share some of his enduring research efforts that he has been pursuing in collaboration with students, and try to read the tea leaves as to where his future efforts will lead him in this journey.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/pallavi-eeswara.jpg",
         'title':"Sharing your research for impact and engagement",
         'Name of the speaker':'Pallavi Eswara',
         'Title of the Seminar':'Sharing your research for impact and engagement',
@@ -74,6 +82,7 @@ export const seminars = [
         'Abstract':'There is an increasing need to engage with broad audiences to convey the findings, importance of scientific research and motivate younger generations to be involved with science. Academic and research institutions, funding bodies and government agencies are very interested in scientists being able to engage widely with the public. When it comes to sharing about their research to a broad audience- be it educated people, lay audience or school children it is indeed a challenge for scientists to convey the hypothesis, methods, findings and conclusions without technical jargon or feeling like they are “diluting the science”. In this talk, we will discuss the state of science communication, principles and best practices for communication to a broad audience. Benefits of this kind of engagement to the scientist and society will also be presented. The presentation will also discuss how scientists can use science communication as a tool to further interdisciplinary research collaboration and non-traditional stakeholder collaborations.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/Mijic_-Ana.jpg",
         'title':"Water Systems Integration Modelling Framework – A Tool to Inform Future Water Planning at a Systems Level",
         'Name of the speaker':'Dr. Ana Mijic',
         'Title of the Seminar':'Water Systems Integration Modelling Framework – A Tool to Inform Future Water Planning at a Systems Level',
@@ -83,6 +92,7 @@ export const seminars = [
         'Abstract':'Integrated water management and planning has been a focus of research for many decades, but only recently we have started discussing the challenge from a systems perspective. The need for systems approach to water management is defined through integration between physical, environmental, and socio-economic components of the system, for which the evidence should be provided at adequate spatiotemporal resolutions. In this seminar, the novel Water Systems Integration Modelling (WSIMOD) Framework will be presented. The WISMOD allows for the representation of the water system’s demands and impacts of multiple sectors and actors’ decisions within a single tool, which is considered beneficial to increasing a shared understanding of system performance and for more collaborative and coherent decisions on integrated water resources, water quality and flood management. The WSIMOD is a self-contained software package that includes modelled representations of key physical and infrastructure elements of the water cycle (urban and rural), with each type of modelled element generically described as a component. Components are written in such a way that any component can interact with any other component. This enables a flexible representation of a water system that is needed to accommodate the wide variety of different built/natural infrastructure configurations and scales. The talk will showcase how the tool has been developed and successfully tested through a range of applications in the UK, including integrated analysis of urban water systems, catchment water management and urban water neutrality.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/naresh-devinini.jpg",
         'title':"Shaping the Future of India’s Food Water Energy Livelihood Nexus",
         'Name of the speaker':'Dr. Naresh Devineni',
         'Title of the Seminar':'Shaping the Future of India’s Food Water Energy Livelihood Nexus',
@@ -92,6 +102,7 @@ export const seminars = [
         'Abstract':'This study provides a formal analysis of the design of an Indian food procurement system that considers climate-driven variations in renewable water supply, needs for groundwater pumping, varying regional productivity of crops, and farm-level economics, assuming that the food security goals are to be met while keeping current procurement prices fixed for each crop and maximizing net aggregate farm income from the procurement system. A systems approach is taken to integrate data from disparate sources and predict water stress and sustainable agricultural enhancement regions. A by-product of the analysis is a reduction in the aggregate use of non-renewable water and the consequent decrease in irrigation water requirements and hence water and energy stress. Thus, the “climate-food-water-energy-livelihood” nexus of issues is addressed conjunctively by leveraging data analytics and systems approaches. The talk will be based on our recent paper in Nature Communications on solving groundwater depletion in India while achieving food security https://www.nature.com/articles/s41467-022-31122-9'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/tushar-sinha.jpg",
         'title':"Effects of Urbanization and Extreme Climatic Events on Water Quantity and Quality",
         'Name of the speaker':'Dr. Tushar Sinha',
         'Title of the Seminar':'Effects of Urbanization and Extreme Climatic Events on Water Quantity and Quality',
@@ -101,6 +112,7 @@ export const seminars = [
         'Abstract':'Rapid urbanization and intensification of extreme climatic events directly affect peak flow and water quality in streams in both urban and mixed-use watersheds. Low Impact Development (LID) strategies such as Green Roof (GR) and Rain Garden (RG) can partially mitigate such effects on stormwater runoff and water quality. However, efficiency of LID strategies in handling moderate to large rainfall events to improve the water quality of a watershed is not well understood. Thus, this talk will discuss how different LID strategies affect peak flow and water quality in urban and mixed-use watersheds. The analysis on effects of different LID strategies showed that during the high rainfall intensity event of 15 cm/day, no significant differences due to LID strategies were observed on the peak flow reduction. However, about 32% reduction in peak flow was attained when all three LID strategies considered in this study (GR, RG and GR+RG in series) under low to moderate rainfall intensities of 2 – 3 cm/day. In addition, better water management strategies are needed to mitigate floods and droughts by co-managing green (wetlands) and grey (dams) infrastructure. A framework to co-manage green and grey infrastructure will be discussed to enhance water resilience under extreme climatic events.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/Shashi_PP.jpg",
         'title':"VEDAS: A platform for web-based visualization and analysis of Satellite data",
         'Name of the speaker':'Dr. Shashikant A Sharma',
         'Title of the Seminar':'VEDAS: A platform for web-based visualization and analysis of Satellite data',
@@ -110,6 +122,7 @@ export const seminars = [
         'Abstract':'ISRO is operating a fleet of Earth Observation satellites with a wide range of sensors of varying capabilities. In addition to making satellites and launch vehicles, ISRO is also conducting scientific research and demonstrating applications of space-based inputs in many disciplines including agriculture, forestry, geology, environmental studies, urban planning, infrastructure development, meteorology, planetary sciences, disaster management, etc. The efficient utilization of this voluminous geospatial content generated by the thematic experts and the data acquired by several Indian and publicly available EO satellites is essential for adding greater societal value as envisaged by Dr Vikram Sarabhai, the founder of India’s space programme. In this context, the Space Applications Centre at Ahmedabad contemplated the development of the ‘Visualization of EO Data and Archival System’, abbreviated as VEDAS. It aims to organize the vast quantum of geospatial databases on various themes and develop customized decision support systems and applications for an improved understanding of the earth and planetary systems. VEDAS is a step towards creating a “geo-data-rich society” supporting mainstreaming of satellite imagery and remote sensing in the process of National Development. In this talk, I will provide an overview of the VEDAS, its capabilities and its potential for research and decision-making, while illuminating what lies ahead for us. For example, VEDAS has endeavoured to support web-based geospatial analysis by providing processing tools for analysis on the internet and we are now building an online interactive platform for Big Data analytics and supporting the application of Artificial Intelligence and Machine Learning (AI/ML) tools.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/ArpitaMondal.jpg",
         'title':"What (NOT) to do as an early career academic and researcher in India",
         'Name of the speaker':'Dr. Arpita Mondal',
         'Title of the Seminar':'What (NOT) to do as an early career academic and researcher in India',
@@ -119,6 +132,7 @@ export const seminars = [
         'Abstract':'‘How to become a professor in an Indian Institute of Technology (IIT)?’ is a question which is asked by several in our country. There is an increasingly large number of awareness and mentoring programs conducted by organizations and academies in this country to address this query among the public in general, and graduate students in particular. Another equally important question to which answers must be sought is, ‘How to survive as an early career academic or researcher in today’s India?’. Many Indian academic or research institutions offer to young professionals what are termed as ‘permanent’ jobs; however, stagnation, dearth of progress and lack of navigation along multiple directions of growth (both one’s own individual growth and that of his/her employer) can prove fatal for one’s career and more importantly, personal well-being, if adequate, timely steps are not taken to make sure one is not only ‘surviving’ but also ‘thriving’, particularly compared to global benchmarks. In this seminar, I will talk about key responsibilities expected out of an early career academic in a leading engineering institute in India, highlight some opportunities and challenges towards a bright and successful academic/research career and also offer suggestions to avoid some mistakes (I think) I did. I will share some stories, and advice that I had been lucky to receive, and hopefully hear back from the audience about what drives them towards their own pursuit of excellence. Women graduate students and early career researchers are expected to particularly benefit from this talk, since I will also share some experiences and suggestions on overcoming gender-defined obstructions.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/alexandre-anesio.jpg",
         'title':"How microbes melt glaciers and ice sheets?",
         'Name of the speaker':'Prof. Alexandre Anesio',
         'Title of the Seminar':'How microbes melt glaciers and ice sheets?',
@@ -128,6 +142,7 @@ export const seminars = [
         'Abstract':'Glaciers and ice sheets were long believed to be sterile environments, but just like other large ecosystems (e.g., tropical forests, tundra), they are now widely recognized as one of the Earth’s biomes, teeming with life. This biome is also the most under-investigated on the planet from a biological and biogeochemical perspective, representing a new and exciting frontier in science. Home to large, naturally occurring communities of mostly microbes, glaciers and ice sheets host metabolically active organisms, interacting with each other. These processes represent more than just a minor curiosity of life under extreme conditions. On glacier and ice sheet surfaces, microbes have been shown to alter physical and chemical characteristics of snow and ice with direct consequences for snow/ice solar-heating and amplified melt. During the summer ablation, the bare ice is largely dark, as it is colonized by pigmented ice algae. Biological growth of icebound algal cells can accumulate biomass high enough to cause albedo reduction between 12% and 21%, depending on the algal cell abundances. The impact of microbially-mediated albedo effect is predicted to increase further with climate change, since a warming climate will further extend melt seasons. Furthermore, microbial activity and carbon fixation on ice surfaces can result in export of labile dissolved organic matter to downstream ecosystems.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/Dev_Niyogi.jpg",
         'title':"Representing Cities in Weather and Climate Models: From Processes to Urban Digital Twins",
         'Name of the speaker':'Prof. Dev Niyogi',
         'Title of the Seminar':'Representing Cities in Weather and Climate Models: From Processes to Urban Digital Twins',
@@ -138,6 +153,7 @@ export const seminars = [
       },
 
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/abhijit-mukherjee.jpg",
         'title':"Interaction of groundwater with surface water: the example of Ganges river",
         'Name of the speaker':'Prof. Abhijit Mukherjee',
         'Title of the Seminar':'Interaction of groundwater with surface water: the example of Ganges river',
@@ -147,6 +163,7 @@ export const seminars = [
         'Abstract':'The mega-Himalayan river Ganges (or Ganga), one of the largest in the world and the lifeline of northern India for the last several thousand years, hosting almost 10% of the present global and half of Indian population on its fertile banks, has been found to have unprecedented low levels of river water (drying up) in several lower reaches in the summers of recent years. Using a combination of satellite-based and in-situ measurements of river water and groundwater levels, isotopic and chemical analyses of Ganges river and groundwater, simulation results from global hydrologic models and regional groundwater flow models, shows that the present-day summer drying of the river Ganges is possibly driven by groundwater depletion in the Gangetic aquifers of north India. One hypothesis is that a decrease in groundwater inflow (baseflow) has a severe impact on the health of the river. The present-day baseflow to the Ganges from the adjoining aquifers, which may be up to a third of total river volume during pre-monsoon months, might have decreased by >50% from the beginning of irrigation-pumping age in the 1970s. Under several assumptions and approximations, it has been predicted that the groundwater contribution to Ganges river water flow would continue to decrease in impending years, and can decrease up to ~75% of the 1970s. Thus, a continuation of the groundwater exploitation at similar per-capita rates might jeopardize the existence of the Ganges River in several reaches in near future, thereby leading to disastrous carbohydrate and other food scarcity for ~ 115 million people inhabiting in the study region by 2050.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/prof-aditi-mukherji.jpg",
         'title':"Major findings from IPCC Water Chapter on Water Related Adaptations and their Effectiveness in reducing risks",
         'Name of the speaker':'Dr. Aditi Mukherji',
         'Title of the Seminar':'Major findings from IPCC Water Chapter on Water Related Adaptations and their Effectiveness in reducing risks',
@@ -156,6 +173,7 @@ export const seminars = [
         'Abstract':'IPCC Working Group II formally launched its report on Impacts, Adaptation and Vulnerability on 28th of February, 2022. The writing of this report involved over 270 scientists who spent last 3 years going through literature and assessing the impact of climate change on human and natural systems, and role of adaptation in alleviating some of these impacts. Water chapter is one among 18 chapters in this report. This chapter reiterates findings from WGI report about intensification of water cycle, and shows how every sector of the economy (agriculture, energy, urban etc.) and ecosystems have been affected by this climate induced intensification of water cycle. Majority of world’s population, especially those involved in climate sensitive occupations like agriculture are feeling impacts of climate change through changes in the water cycle, such as through extreme precipitation, melting of glaciers, floods and droughts. The chapter also finds that water is also a part of solution. A large majority of the adaptation options are in response to water related hazards, or adaptation response itself is water related, e.g., irrigation, soil moisture conservation, water storage, rainwater harvesting etc. Many of these water adaptation responses have several benefits, including instances of climate risk reduction. However, effectiveness of these adaptation measures in reducing climate risks goes down substantially at higher levels of global warming, thereby emphasizing the importance of mitigation along with adaptation.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/PaulBates.jpg",
         'title':"Progress in developing continental and global scale flood inundation models",
         'Name of the speaker':'Prof. Paul D Bates',
         'Title of the Seminar':'Progress in developing continental and global scale flood inundation models',
@@ -165,6 +183,7 @@ export const seminars = [
         'Abstract':'Flooding is one of the most costly natural disasters and every year affects tens of millions of people and causes billions of dollars in losses, and the most damaging events have affect very large areas. Despite this, the reality is that all flood impacts are felt locally and occur at the level of individual properties. The ultimate challenge in flood modelling therefore is how to provide detailed and skilful hazard and risk predictions at the scale of individual buildings over whole continents or even the whole globe. This talk describes recent efforts at the University of Bristol in the UK to build a two dimensional hydrodynamic model at 90m resolution covering the entire planet and 30m over the parts of the US, Europe and the UK, both for current conditions and future climates. The talk describes the technical challenges and also detailed validation studies which demonstrate the strengths and weaknesses of this type of model.'
       },
       {
+        imgSrc: "../../assets/images/Guest Seminar Series/prof-sk-tandon.jpg",
         'title':"The Anthropocene Concept: Disturbance(s) in the Terrestrial Hydrosphere",
         'Name of the speaker':'Prof. S.K. Tandon',
         'Title of the Seminar':'The Anthropocene Concept: Disturbance(s) in the Terrestrial Hydrosphere',
@@ -172,7 +191,9 @@ export const seminars = [
         'Online Platform':'MS Teams [link to  the video of the seminar]',
         'About the Speaker':' Prof. S.K. Tandon is an eminent geoscientist and academician who has been associated with several institutions of higher learning of our country. After an early stint at the Wadia Institute of Himalayan Geology from 1971 to 1976, he taught at the University of Delhi for 34 years until his retirement from there in 2010. Later, he was involved in teaching/research and mentoring at the Earth and Environmental Sciences departments of the   IIT Kanpur (2013-2015), IISER Bhopal (2016-2022) and IISER Mohali (2017). Prof. Tandon has broad research interests in the field of geodynamic evolution of India and has contributed significantly to the understanding of several Phanerozoic stratigraphic records of the country, including the Late Quaternary sequences of the Ganga Plains and the Thar desert of Rajasthan. His lasting interest is in the understanding of Earth Surface Processes- both in modern and ancient continental sedimentary systems; it is this interest in Earth Surface Processes that has attracted him to the subject of Anthropocene. Prof. Tandon has authored over 150 research papers and has co-edited both books and journal special issues/volumes. He is a Fellow of all the three science academies in India, besides being a Fellow of the Third World Academy of Sciences. He has served the Research Councils and the Governing Bodies of most of the Earth Sciences institutes of the country, and has chaired several of the Earth Science Committees of the DST, SERB, CSIR, besides having been the Pro-Vice Chancellor of the University of Delhi from 2005 to 2010.',
         'Abstract':'The term Anthropocene, little known two decades ago, was introduced by Crutzen and Stoermer in 2000 and is now in common usage in the discourse of different science disciplines, particularly in the Earth, Environmental and Life Sciences. Further, it has also been adopted in art and cinema, humanities, social sciences, and policy and governance amongst others. The essence of the concept is well articulated in the title of an article published in 2008 by three leading authorities (Steffen, Crutzen, and McNeill): ‘The Anthropocene: Are humans now overwhelming the great forces of nature?’ Notwithstanding debates around the meaning and definition of the term, as well as the placement of the lower boundary of the Anthropocene, the informal usage of the term stands firmly entrenched across several domains of knowledge. Additionally, the concept of a human-dominated planet is closely linked to the ideas of tipping points, planetary boundaries, and the exploration of safe operating space(s) for humanity, that have been quite effectively championed in the last decade by Rockstrom and his collaborators. Of the nine planetary boundaries advanced by these authors in an influential article published in Ecology and Society in 2009, the water boundary along with the attendant water cycle modifications /water resilience are issues of strong concern, and are therefore being elaborated currently. In this talk, I shall discuss the development of these concepts in addition to presenting a few examples from India’s disturbed river systems.'
-      }, {
+      },
+      {
+        imgSrc: "../../assets/images/Guest Seminar Series/kala-s.jpg",
         'title':"Are Cities Culprits or Victims? India’s Carbon Footprint Beyond 2020",
         'Name of the speaker':'Prof. Kala Seetharam Sridhar',
         'Title of the Seminar':'Are Cities Culprits or Victims? India’s Carbon Footprint Beyond 2020',
