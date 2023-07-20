@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { ResearchComponent } from './views/research/research.component';
+import { CentresAndFacilitiesComponent} from './views/centres-and-facilities/centres-and-facilities.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -12,7 +13,9 @@ const routes: Routes = [
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'research', component: ResearchComponent},
-  {path:'**',component:PageNotFoundComponent}
+  {path: 'centres-and-facilities', component: CentresAndFacilitiesComponent},
+  {path:'**',component:PageNotFoundComponent},
+
 ];
 
 @NgModule({
