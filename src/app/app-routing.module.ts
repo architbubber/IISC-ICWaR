@@ -7,6 +7,7 @@ import { AboutUsComponent } from './views/about-us/about-us.component';
 import { ResearchComponent } from './views/research/research.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { SeminarsComponent } from './views/seminars/seminars.component';
+import { CentresAndFacilitiesComponent} from './views/centres-and-facilities/centres-and-facilities.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path: 'about-us', component: AboutUsComponent},
   {path: 'research', component: ResearchComponent},
   {path: 'seminars', component: SeminarsComponent},
+  {path: 'centres-and-facilities', component: CentresAndFacilitiesComponent},
   {path:'**',component:PageNotFoundComponent}
+
 ];
 
 @NgModule({
