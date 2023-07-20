@@ -1,4 +1,4 @@
-export const seminars = [
+export const seminars =
   {
     'ICWaR Guest Seminar Series': [
       {
@@ -182,8 +182,8 @@ export const seminars = [
         'Abstract':' While the Global North and South were very different in terms of their trajectory of economic growth some years ago, now they are increasingly convergent on economic growth as well as their environmental sustainability. It is now also well known that cities are the engines of economic growth in developing countries of the Global South. However, much as they are the engines of the economy, cities are also blamed for carbon emissions due to a number of factors. But cities are also victims of carbon emissions and climate change due to the density of population and economic activity. Carbon emissions are determined not only by urbanization, but also by a city’s spatial area, its income, energy consumption, and value added by industry. In this research we understand the role played by various factors on carbon emissions empirically by examining India’s data at the district level, where city level data on carbon emissions are quite rare. We use a unique dataset of carbon footprint at the district level, adapting from Lee et al (2021). We estimate carbon emissions as dependent on the district area, urbanization, per capita income, literacy rate, workforce participation and population density. We find rising literacy rate, urbanization, labor force participation, poverty ratio and income to be major causes of rising carbon footprint. We find geographic area of a district has no effect on carbon footprint. Given that reducing poverty ratio is a factor in increasing carbon footprint, the question to ask is if this is equitable. The regression is used to predict carbon emissions in the medium term, i.e., 2030, and longer run, i.e., 2050, assuming current trends continue.'
       },
     ],
-  },
-  {
+
+
     'ICWaR Community Seminar Series': [
 
       {
@@ -359,4 +359,4 @@ export const seminars = [
     ],
   }
 
-]
+
