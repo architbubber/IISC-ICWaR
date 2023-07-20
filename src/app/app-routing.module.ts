@@ -5,6 +5,8 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { ResearchComponent } from './views/research/research.component';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { SeminarsComponent } from './views/seminars/seminars.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -12,11 +14,13 @@ const routes: Routes = [
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'research', component: ResearchComponent},
+  {path: 'seminars', component: SeminarsComponent},
   {path:'**',component:PageNotFoundComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}]
 })
 export class AppRoutingModule { }

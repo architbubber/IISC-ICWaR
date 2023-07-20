@@ -12,6 +12,7 @@ import { CarouselModule } from 'primeng/carousel';
 
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { ResearchComponent } from './views/research/research.component';
+import { SeminarsComponent } from './views/seminars/seminars.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ResearchComponent } from './views/research/research.component';
     PageNotFoundComponent,
     ContactUsComponent,
     AboutUsComponent,
-    ResearchComponent
+    ResearchComponent,
+    SeminarsComponent
   ],
   imports: [
     BrowserModule,
