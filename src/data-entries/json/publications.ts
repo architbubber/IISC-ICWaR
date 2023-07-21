@@ -74,7 +74,7 @@ export const publications = [
           'text':'Ramachandra T. V. & Mujumdar P. P. (2009). Urban Floods: Case Study of Bangalore. Journal of National Institute of Disaster Management, Volume 3(2).',
           'links':[
             'https://wgbis.ces.iisc.ac.in/energy/water/paper/urbanfloods_bangalore/floods_city.html']
-        },
+        }
       ]
   },
   {
@@ -130,7 +130,7 @@ export const publications = [
           'text':'Cao, L., Bala, G., Zheng, M., & Caldeira, K. (2015). Fast and slow climate responses to CO2 and solar forcing: A linear multivariate regression model characterizing transient climate change. Journal of Geophysical Research: Atmospheres, 120(23), 12-037.',
           'links':[
             'https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2015JD023901']
-        },
+        }
       ]
 
   },
@@ -167,7 +167,7 @@ export const publications = [
           'text':'Sekhar, M., Shindekar, M., Tomer, S. K., & Goswami, P. (2013). Modeling the vulnerability of an urban groundwater system due to the combined impacts of climate change and management scenarios. Earth Interactions, 17(10), 1-25.',
           'links':[
             'https://journals.ametsoc.org/doi/abs/10.1175/2012EI000499.1']
-        },
+        }
       ]
 
   },
@@ -204,7 +204,7 @@ export const publications = [
           'text':'Rahul, P., Ghosh, P., Bhattacharya, S. K., & Yoshimura, K. (2016). Controlling factors of rainwater and water vapor isotopes at Bangalore, India: Constraints from observations in 2013 Indian monsoon. Journal of Geophysical Research: Atmospheres, 121(23), 13-936.',
           'links':[
             'https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016JD025352']
-        },
+        }
       ]
 
   },
@@ -231,7 +231,7 @@ export const publications = [
           'text':'Masanta, S. K., & Srinivas, V. V. (2020). Regionalization of evapotranspiration in India using fuzzy dynamic clustering approach. Part 2: Applications of regions. International Journal of Climatology.',
           'links':[
             'https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/joc.6773']
-        },
+        }
       ]
 
   },
@@ -293,7 +293,7 @@ export const publications = [
           'text':'Sheldon, N. D., & Chakrabarti, R. (2010, June). Mass extinctions, climate change, and enhanced terrestrial weathering?: The End-Permian and End-Guadalupian events compared. In Geochimica et Cosmochimica Acta (Vol. 74, No. 12, pp. A944-A944). THE BOULEVARD, LANGFORD LANE, KIDLINGTON, OXFORD OX5 1GB, ENGLAND: PERGAMON-ELSEVIER SCIENCE LTD.',
           'links':[
             '']
-        },
+        }
       ]
 
   },
@@ -320,7 +320,7 @@ export const publications = [
           'text':'Ganguly, S., & Kumar, M. M. (2014). Analytical solutions for transient temperature distribution in a geothermal reservoir due to cold water injection. Hydrogeology Journal, 22(2), 351-369.',
           'links':[
             'https://link.springer.com/article/10.1007/s10040-013-1048-2']
-        },
+        }
       ]
 
   },
@@ -362,7 +362,7 @@ export const publications = [
           'text':'Savita Bhardwaj, Dhriti Kapoor, Simranjeet Singh, Vandana Gautam, Daljeet Singh Dhanjal, Sadaf Jan, Praveen C. Ramamurthy, Ram Prasad & Joginder Singh, (2021). Nitric Oxide: A Ubiquitous Signal Molecule for Enhancing Plant Tolerance to Salinity Stress and Their Molecular Mechanisms. Journal of Plant Growth Regulation, 40, 2329–2341, doi: https://doi.org/10.1007/s00344-021-10394-3 .',
           'links':[
             'https://link.springer.com/article/10.1007/s00344-021-10394-3']
-        },
+        }
       ]
 
   },
@@ -389,7 +389,7 @@ export const publications = [
           'text':'B. D. Vishwakarma, M. Horwath, A. Groh, J. L. Bamber (2021). Accounting for GIA signal in GRACE products. Geophysical Journal International, 228(3), 2056–2060, doi: doi.org/10.1093/gji/ggab464.',
           'links':[
             'https://academic.oup.com/gji/article/228/3/2056/6426181']
-        },
+        }
       ]
 
   },
@@ -406,7 +406,7 @@ export const publications = [
           'text':'Bhowmik, R.D., and Sengupta, S. (2022). Understanding the Influence of Snow Cover in Issuing Streamflow Forecasts for High-Mountainous Basins in the Himalayan Region. Proceedings of the 39th IAHR World Congress. https://www.iahr.org/library/infor?pid=21097',
           'links':[
             'https://www.iahr.org/library/infor?pid=21097']
-        },
+        }
       ]
 
   },
@@ -455,7 +455,7 @@ export const publications = [
           'links':[
             'http://icwar.iisc.ac.in/wp-content/uploads/2018/01/UWS_print.pdf'
           ]
-        },
+        }
       ]
 
   },
