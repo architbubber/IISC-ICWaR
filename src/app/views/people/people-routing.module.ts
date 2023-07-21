@@ -10,4 +10,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PeopleRoutingModule { }
+export class PeopleRoutingModule {}

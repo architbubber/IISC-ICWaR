@@ -1,7 +1,8 @@
-<div *ngIf="type=='faculty'" class="container justify-content-center bg-light">
+<div *ngIf="dataType=='nested'" class="container justify-content-center bg-light">
   <div class="container row justify-content-start ">
-    <div class="row p-4" *ngFor="let parent of designationNames;index as i">
+    <div class="p-4" *ngFor="let parent of designationNames;index as i">
       <h1 class="p-4 col-md-3 text-capitalize text-dark">{{parent}}</h1>
+      <div class="row">
       <ng-container *ngFor="let row of staffUnderDesignation[i]" >
         <div class="card col-md-2 m-1 " style="box-shadow: 1px 1px 10px 1px black;" >
           <img class="p-1 card-img card-img-top shadow"  [src]="row.imgSrc"/>
@@ -14,16 +15,17 @@
         </div>
       </ng-container>
     </div>
+    </div>
   </div>
 </div>
-<div *ngIf="type!='faculty'" class="container-fluid justify-content-center " style="background-image: url('https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnature.2012.10702/MediaObjects/41586_2012_Article_BFnature201210702_Figb_HTML.jpg') ;background-size: cover;background-repeat: no-repeat;">
+<div *ngIf="dataType!='nested'" class="container-fluid justify-content-center " style="background-image: url('') ;background-size: cover;background-repeat: no-repeat;">
   <h1 class="p-4 text-center text-capitalize font-weight-bolder" style="font-family:Arial, Helvetica, sans-serif;">{{designationNames[0]}}</h1>
   <div class="row justify-content-center ">
     <ng-container class="row container " *ngFor="let row of staffUnderDesignation" >
-      <div class="card col-md-3 col-sm-12 m-1 " style="box-shadow: 1px 1px 30px 1px rgb(58, 57, 57);background-color: rgb(0, 0, 0);" >
-        <img class="p-1 m-1 card-img card-img-top shadow border border-info"  [src]="row.imgSrc"/>
+      <div class="card col-md-2 col-sm-12 m-1 " style="box-shadow: 1px 1px 30px 1px rgb(58, 57, 57);background-color: rgb(86, 85, 85);" >
+        <img class="p-1 pb-0 m-1 card-img card-img-top shadow border border-info"  [src]="row.imgSrc"/>
         <h4 class="card-title card-header" style="font-size: small;font-weight: bold;">{{row.name}}</h4>
-        <div class="card-body">
+        <div class="card-body " style="max-height:200px;overflow-y: scroll;bottom: 100px;">
           <div class="row card-text d-flex text-white" *ngFor="let key of getKeysFromJson(row)">
             <div *ngIf="key!='name' &&  key!='imgSrc'" class="col-6 font-weight-bold">{{key}}</div>
             <div *ngIf="key!='name' &&  key!='imgSrc'" class="col-6" style="font-size: smaller;">{{row[key]}}</div>

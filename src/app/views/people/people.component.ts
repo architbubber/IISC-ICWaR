@@ -10,8 +10,11 @@ import { FacultyInfo, ResearchStudents } from './people.service';
 })
 
 export class PeopleComponent {
+
   staffUnderDesignation:any;
   type : any;
+  dataType: string ='';
+
   constructor(private route: ActivatedRoute){}
 
   designationNames: string[]=[];
@@ -22,40 +25,45 @@ export class PeopleComponent {
     let filterBy = this.route.snapshot.queryParamMap.get('filterBy');
     switch(this.type){
       case 'faculty':
-        this.staffUnderDesignation =  [];
-        this.processFacultyDataForRendering(filterBy?.toString());
+        this.dataType = 'nested';
+        this.processNestedDataForRendering(filterBy?.toString(),faculty);
         break;
       case 'visitors':
         this.processRequestedDataForRendering('Visitors',visitors);
         break;
       case 'researchStudents':
-        this.processRequestedDataForRendering('Research Students',researchStudents);
+        this.dataType = 'nested';
+        this.processNestedDataForRendering(filterBy?.toString(),researchStudents);
         break;
       case 'postDoctoralScholars':
+        // this.dataType = 'nested';
         this.processRequestedDataForRendering('Post Doctoral Scholars',postDoctoralScholars);
         break;
       case 'projectStaff':
-        this.processRequestedDataForRendering('Project Staff',projectStaff);
+        this.dataType = 'nested';
+        this.processNestedDataForRendering(filterBy?.toString(),projectStaff);
         break;
       case 'officeStaff':
-        this.processRequestedDataForRendering('Office Staff',officeStaff);
+        this.dataType = 'nested';
+        this.processNestedDataForRendering(filterBy?.toString(),officeStaff);
         break;
     }
   }
 
-  processFacultyDataForRendering(filterBy:any){
+  processNestedDataForRendering(filterBy:any,peopleData:any){
+    this.staffUnderDesignation = [];
+    for(var i=0;i<peopleData.length;i++){
 
-    for(var i=0;i<faculty.length;i++){
-
-      let key = Object.keys(faculty[i])[0];
+      let key = Object.keys(peopleData[i])[0];
 
       if(filterBy==null || filterBy=='all'|| key==filterBy){
         this.designationNames.push(key);
-        let c  = Object.values(faculty[i]);
+        let c  = Object.values(peopleData[i]);
         this.staffUnderDesignation.push(c[0]);
       }
     }
   }
+
   processRequestedDataForRendering(designationName:string,data:any){
     this.designationNames.push(designationName);
     this.staffUnderDesignation = data;
