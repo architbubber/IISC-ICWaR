@@ -12,8 +12,8 @@ import { CarouselModule } from 'primeng/carousel';
 
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { ResearchComponent } from './views/research/research.component';
-import { SeminarsComponent } from './views/seminars/seminars.component';
 import { CentresAndFacilitiesComponent } from './views/centres-and-facilities/centres-and-facilities.component';
+import { SeminarsAndPublicationsComponent } from './views/seminars-and-publications/seminars-and-publications.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +23,8 @@ import { CentresAndFacilitiesComponent } from './views/centres-and-facilities/ce
     ContactUsComponent,
     AboutUsComponent,
     ResearchComponent,
-    SeminarsComponent,
-    CentresAndFacilitiesComponent
+    CentresAndFacilitiesComponent,
+    SeminarsAndPublicationsComponent
   ],
   imports: [
     BrowserModule,

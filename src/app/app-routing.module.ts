@@ -6,8 +6,8 @@ import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { ResearchComponent } from './views/research/research.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
-import { SeminarsComponent } from './views/seminars/seminars.component';
 import { CentresAndFacilitiesComponent} from './views/centres-and-facilities/centres-and-facilities.component';
+import { SeminarsAndPublicationsComponent } from './views/seminars-and-publications/seminars-and-publications.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'research', component: ResearchComponent},
-  {path: 'seminars', component: SeminarsComponent},
+  {path: 'seminars-and-publications', component: SeminarsAndPublicationsComponent},
   {path: 'centres-and-facilities', component: CentresAndFacilitiesComponent},
   {path:'**',component:PageNotFoundComponent}
 

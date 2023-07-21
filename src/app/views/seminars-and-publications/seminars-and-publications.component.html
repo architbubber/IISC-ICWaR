@@ -1,0 +1,49 @@
+<div class="py-5 container-fluid w-100 align-items-center justify-content-center" style="min-height: 100vh; background-image: url('https://static.theprint.in/wp-content/uploads/2018/10/IISC.jpg');background-repeat: no-repeat;background-size: cover;">
+  <h1 class="text-white p-2 px-5 container text-center">Seminars And Publications </h1>
+  <div class="text-center text-white container ">Click to view
+  <div class="row justify-content-center" >
+    <ng-container *ngFor="let name of nameOfDataToRender;index as i">
+      <button class="btn btn-light col col-md-2 m-1 shadow border-1 border-warning align-self-center" (click) = "showDataForSelectedTab(name)">
+        <p class="text-center">{{name}}</p>
+      </button>
+    </ng-container>
+  </div>
+</div>
+
+  <div class="container-md mt-2 justify-content-center">
+    <!-- Seminars Card Type -->
+    <div class="justify-content-center border border-1 border-dark" id={{removeSpaceFromString(name)}} *ngFor="let name of typesOfSeminars;index as i" style="max-height: 70vh;overflow-y: scroll;background-color: aliceblue;">
+      <div class="h3 py-3 text-dark border border-1 border-dark text-center  font-weight-bolder font-italic" style="text-shadow: 1px 1px 10px black;" style="position:sticky;top:0px;z-index: 1;text-shadow: 1px 1px 10px white;font-weight: bolder;background-color: #0dccd6 ;">{{name}}</div>
+      <div class="row m-2 card bg-light border border-secondary border-3 shadow-lg py-3" *ngFor="let item of eachSeminarArray[i];index as index">
+        <img height="220px" class="col-md-2 col-sm-5 ms-2  align-self-start" src="{{item['imgSrc']}}">
+        <h6 class="col-md-7 col-sm-3 font-weight-bolder align-self-end" style=" text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.754);">{{item['title']}}</h6>
+         <button class="col-md-2 col-sm-3 offset-10 m-1 align-self-end btn btn-primary" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#'+index" aria-expanded="false" [attr.aria-controls]="index">
+          Read more
+        </button>
+        <div class="collapse p-md-5 p-sm-3 card-body" id={{index}} >
+          <div class="row" *ngFor="let key of getKeysOfJson(item)" >
+              <h6 *ngIf="key!= 'title' && key!= 'imgSrc' " class="col-6 text-capitalize font-weight-bold">{{key}}</h6>
+              <h6 *ngIf="key!= 'title' && key!= 'imgSrc'" class="col-6">{{item[key]}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id='Publications' class="table-light bg-light table-responsive table-hover table-active table table-bordered table-striped" style="max-height: 60vh;overflow-y: scroll;">
+      <tr class="bg-success text-center text-capitalize border border-1" style="height: 50px;position: sticky;top: 0;vertical-align: middle;">
+          <th>Name</th>
+          <th>Title</th>
+          <th>Link</th>
+      </tr>
+      <ng-container *ngFor="let item of publications">
+        <ng-container *ngFor="let row of item.publicationsList;index as i">
+        <tr class="border border-bottom-3 border-1 border-dark" >
+          <td class="border border-1 border-dark" *ngIf="i==0" [attr.rowspan]="item.publicationsList.length" >{{item.name}}</td>
+            <td class="border border-1 border-dark" >{{row.text}}</td>
+            <td class=" border border-1 border-dark" style="word-wrap: break-word;max-width: 250px;"><a [href]="row.links">{{row.links}}</a></td>
+          </tr>
+      </ng-container>
+    </ng-container>
+  </div>
+  </div>
+</div>
