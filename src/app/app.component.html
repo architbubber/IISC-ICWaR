@@ -75,15 +75,23 @@
 
     <div class="col-sm-12 col-md-4 float-md-right mt-4 mt-md-0" style="font-size: x-small;">
       <h5>Quick Contact</h5>
-      <form class="form-inline">
+      <form class="form-inline" action={{configurations.spreeMailUrl}} method="POST">
         <label for="email">Email</label>
-        <input type="email" class="form-control  bg-transparent" required>
+        <input type="email" name="email" class="form-control  bg-transparent text-white" required>
         <label for="message">Message</label>
-        <textarea class="form-control  bg-transparent"  rows="4" placeholder="Enter your message" required></textarea>
+        <textarea name="message" class="form-control text-white bg-transparent"  rows="4" placeholder="Enter your message" required></textarea>
         <button type="submit" class=" bg-light btn shadow-lg my-2">Send</button>
       </form>
     </div>
+
+    <div class="col-12 row" style="width: 4%;height: 1px;background: rgba(128, 128, 128, 0.344);">
+      <a  href="/" class="col-4 fa fa-youtube mx-2 text-white"></a>
+      <a  href="/" class="col-4 fa fa-twitter mx-2 text-white"></a>
+      <a  href="/" class="col-4 fa fa-instagram mx-2 text-white"></a>
+    </div>
   </div>
+
+
   <p class="mb-0 pb-0 text-muted" style="text-align:left;" [style.font-size]="screenWidth<768?'xx-small':'x-small'">
     Copyright © 2023 ICWaR, IISC
     <span style="float:right;">

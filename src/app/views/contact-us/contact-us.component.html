@@ -26,15 +26,16 @@
     <div class="col-md-1 d-md-block d-sm-none"></div>
 
     <div class="col-md-3 col-sm-2 my-4">
-      <form class="container p-3 shadow border-1 border-success border" style="border-radius: 25px;" >
+      <form class="container p-3 shadow border-1 border-success border" style="border-radius: 25px;"  action={{configurations.spreeMailUrl}}
+      method="POST">
         <label for="firstName">First Name</label>
-        <input type="text" class="form-control" id="firstName" required>
+        <input type="text" class="form-control" name="firstName" required>
         <label for="lastName">Last Name</label>
-        <input type="text" class="form-control" id="lastName" required>
+        <input type="text" class="form-control" name="lastName" required>
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" required>
+        <input type="email" class="form-control" name="email" required>
         <label for="message">Message</label>
-        <textarea class="form-control " id="message" rows="5" placeholder="Enter your message"></textarea>
+        <textarea class="form-control " name="message" rows="5" placeholder="Enter your message"></textarea>
         <button type="submit" class="btn-success btn shadow-lg my-2">Send</button>
       </form>
     </div>

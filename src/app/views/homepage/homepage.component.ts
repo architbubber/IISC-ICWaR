@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import * as data from '../../../data-entries/json/homepage.json';
+import {homepageData} from '../../../data-entries/json/homepage';
 import { newsJson } from '../../../data-entries/json/news';
 import 'jquery';
 import { News } from './homepage.service';
+import { STRING_TYPE } from '@angular/compiler';
 
 
 @Component({
@@ -13,12 +14,11 @@ import { News } from './homepage.service';
 export class HomepageComponent {
   public newsJsonProcessed: any;
   public news :any;
-  public  data = data;
+  public  data = homepageData;
   public screenWidth: any;
   public screenHeight: any;
+  public slides = homepageData.slides
 
-
-  slides = ['http://www.icwar.iisc.ac.in/wp-content/uploads/2020/10/slideshow1-scaled-1600x600.jpg','http://www.icwar.iisc.ac.in/wp-content/uploads/2020/10/slideshow0-scaled-1600x600.jpg','http://www.icwar.iisc.ac.in/wp-content/uploads/2020/08/students-1600x600.jpg','http://www.icwar.iisc.ac.in/wp-content/uploads/2020/10/Openday_forslideshow.jpg']
 
   responsiveOptions = [{
     breakpoint: '1024px',
@@ -31,11 +31,23 @@ export class HomepageComponent {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
     this.newsJsonProcessed = newsJson;
+    (<any>$('.start-cover-animation h1')).html(this.processCoverStirng());
+
+    // var arr:[] = (<any>$('.start-cover-animation span'));
+
+    var count = 0;
+      setTimeout(()=>{
+        (<any>$('.start-cover-animation h1')).children()[count].hide();
+        count+=1;
+      },1000
+      );
+
+    // setTimeout (()=>{
+    //   (<any>$('.start-cover-animation')).hide()},5000
+    // );
+    (<any>$('.start-cover-animation')).hide();
     console.log(this.newsJsonProcessed[0].title)
-    // console.log(newsJson[0])
-    // newsJson.forEach(f=>{
-    //   this.news.push(new newsArray(f.imgSrc,f.date,f.title));
-    // })
+
     this.news = [
       {random: 'Random', src: 'https://picsum.photos/id/944/900/500'},
       {random: 'Samoa', src: 'https://picsum.photos/id/1011/900/500'},
@@ -45,8 +57,20 @@ export class HomepageComponent {
       {random: 'American Samoa', src: 'https://picsum.photos/id/984/900/500'}
   ];
   }
+  ngAfterInit():void{
+    console.log("Now "+(<any>$('.start-cover-animation > h1')).text());
+  }
   products = [{id: "1000", code: "f230fh0g3", name: "Bamboo Watch", description: "Product Description",
   category: "Accessories",
 }]
+
+processCoverStirng():string{
+  var s = '';
+  var tmp = (<any>$('.start-cover-animation h1')).text();
+  for(var i=0;i<tmp.length;i++)
+    s += '<span>'+tmp[i]+'</span>';
+
+  return s;
+}
 
 }
