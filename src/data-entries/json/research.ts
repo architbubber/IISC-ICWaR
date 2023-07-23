@@ -1,9 +1,9 @@
 
-export const research_theme= [
+export const research_theme=
   {
     imgSrc: "../../assets/images/Vignettes and Theme/research_theme.png"
   }
-]
+
 
 export const research_vignettes=[
   {
@@ -58,9 +58,9 @@ export const collaborations=[
   }
 ]
 
-export const research_projects =[
+export const research_projects =
   {
-    Ongoing:[
+    "Ongoing":[
       {
         'Title' : '	Post-processed Global Climate model outputs for India',
         'Investigators': 'Dr. Rajarshi Das Bhowmik (PI)',
@@ -121,10 +121,8 @@ export const research_projects =[
         'Investigators': 'Prof M Sekhar (PI) James Hutton Institute (JHI), UK (Co PI) Buvaneshwari S (Co PI)',
         'Sponsor': 'JHI, UK'
       }
-    ]
-  },
-  {
-    Completed: [
+    ],
+    "Completed": [
       {
         'Title': 'Start-up grant ',
         'Investigators': 'Dr. Rajarshi Das Bhowmik (PI)',
@@ -170,10 +168,8 @@ export const research_projects =[
         'Investigators': 'Prof  P P Mujumdar (PI)',
         'Sponsor': 'UNESCO'
       }
-    ]
-  },
-  {
-    Abbreviations: [
+    ],
+    "Abbreviations": [
       {
         'CEH': 'Centre for Ecology & Hydrology'
       },
@@ -221,4 +217,3 @@ export const research_projects =[
       }
     ]
   }
-]

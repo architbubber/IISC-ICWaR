@@ -1,14 +1,15 @@
 .bg-img{
+  background-image: url('../../../assets/images/Vignettes and Theme/research_theme.png');
   background-size:contain;
   background-position:center;
-  background-color: rgba(98, 207, 251, 0.485);
+  background-color: rgba(247, 247, 247, 0.485);
   background-repeat: no-repeat;
   color: #ffffff;
   min-height: 90vh;
   text-shadow: 2px 2px 2px rgba(0,0,0,0);
 }
 .card{
-  height: 30%;
+  height: 50%;
   color: white;
   background-color: rgba(255, 255, 255, 0.875);
   text-align: center;
@@ -19,5 +20,11 @@
   height: 45%;
   background-color: rgba(255, 255, 255, 0.284);
 
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 

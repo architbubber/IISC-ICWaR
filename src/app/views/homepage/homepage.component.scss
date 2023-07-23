@@ -31,49 +31,9 @@
 
 ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev,
 ::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
-  background-color: transparent;
-  max-width:0.5vw ;
+
+
 }
-
-.text-each-letter-fade{
-  // white-space: nowrap;
-  // overflow: hidden;
-  animation: type 5s steps(60);
-}
-
-.start-cover-animation{
-  animation: displayRemove 4s;
-  animation-fill-mode: forwards;
-  top:0;
-  height: 100vh;
-  z-index: 10;
-  background-color: #0e0e0e;
-  transition: visibility 4s, opacity 2.5s linear;
-
-  display:flex;
-  flex:1;
-  overflow-y:auto;
-  flex-direction:column;
-  align-items:center;
-}
-
-@keyframes type{
-  from {
-    // width: 0;
-    text-shadow: 1px 1px 10px white;
-  }
-}
-
-@keyframes displayRemove{
-  from{
-    // display: inline !important;
-  }
-  to{
-    display: none !important;
-    // height: 0vh;
-  }
-}
-
 
 
 .overlay {
@@ -90,4 +50,15 @@
   );
   // animation: displayRemove 2s forwards;
   // animation-delay: 4s;
+}
+.youtube-link-dynamic{
+  width:500px;
+   height:300px
+}
+
+@media(max-width: 768px) {
+  .youtube-link-dynamic{
+    width:250px;
+     height:150px
+  }
 }

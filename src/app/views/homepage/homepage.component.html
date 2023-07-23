@@ -1,29 +1,16 @@
-<div class="start-cover-animation justify-content-center align-items-center" style="max-width: 100%;">
-  <div class="row justify-content-center align-items-center" >
-    <h1 class="text-each-letter-fade text-center col-12">ICWaR</h1>
-    <h3 class="text-each-letter-fade text-center col-12" > Interdisciplinary Centre for Water Research (ICWaR) - IISc Bangalore</h3>
-  </div>
-</div>
-
-<div id="carouselInterval" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselInterval" class="carousel slide h-75" data-bs-ride="carousel">
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <ng-container *ngFor="let row of slides;index as i">
+      <button type="button" data-bs-target="#carouselIndicators" attr.data-bs-slide-to={{i}} [class]="i==0?'active':null" [attr.aria-current]='i==0?"current":null' [attr.aria-label]='"Slide "+(i+1)' ></button>
+    </ng-container>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="2500">
-      <img class=" d-block w-100" [src]="slides[0]" >
-      <div class="card-img-overlay overlay-dark"></div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2500">
-      <img class=" d-block w-100" [src]="slides[1]" >
-      <div class="card-img-overlay overlay-dark"></div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2500">
-      <img class=" d-block w-100" [src]="slides[2]" >
-      <div class="card-img-overlay overlay-dark"></div>
-    </div>
+    <ng-container *ngFor="let row of slides;index as i">
+      <div [ngClass]="i==0?'carousel-item active':'carousel-item'" class="carousel-item" data-bs-interval="1500">
+        <img class="d-block w-100" [src]=row >
+        <!-- <div class="card-img-overlay overlay-dark"></div> -->
+      </div>
+    </ng-container>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselInterval" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -34,40 +21,40 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<div class="p-2" style="height:50px;background-color: rgb(221, 23, 23);overflow: hidden;">
+<!-- <div class="p-2" style="height:50px;background-color: rgb(221, 23, 23);overflow: hidden;">
   <div class="scroll-container " style="word-break: keep-all;line-clamp: 1;" [style.animation-duration]="screenWidth<786?'2s':'6s'">
     Assisting government organizations, the public sector and communities in battling the climate change impact on water resources.*
 Developing efficient and affordable water remediation techniques to ensure adequate clean drinking water.*
 Becoming a global leader in water research, by creating an interdisciplinary research environment and training next-generation water scientists.*
 Providing state of the art solutions to complex problems in water research such as urban floods, contamination due to heavy metals and watershed management by developing science-based technological solutions.
   </div>
-</div>
-<!-- Popular Visited -->
-<div class="container-fluid justify-content-center text-center" >
-  <div class="m-1 card-deck p-md-3">
+</div> -->
+<!-- Latest News -->
+<div class="container-fluid m-1 bg-light py-5">
+  <div class="container-fluid justify-content-center m-1 p-1" style="max-width: 100vw;">
     <p-carousel [value]="newsJsonProcessed"
-      [numVisible]="screenWidth<768?1:4"
-      [numScroll]="screenWidth<768?1:0"
-      [autoplayInterval]="screenWidth<768?2500:0"
+      [numVisible]="screenWidth<768?1:3"
+      [numScroll]="1"
+      [autoplayInterval]="screenWidth<768?2500:3000"
       [circular]="true"
       [showIndicators]="false"
-      [showNavigators]="screenWidth<768?true:false">
+      [showNavigators]="true" >
       <ng-template pTemplate="header">
-        <h3 class="header p-4 text-center" >
-          <h1>Recent Highlights</h1>
+        <h3 class="text-center pb-3" >
+          <h1>Latest News</h1>
         </h3>
     </ng-template>
-      <ng-template let-news pTemplate="item">
-        <div class="card card-hover my-2 mx-md-5 border border-2 border-warning mx-2 text-capitalize text-success">
-          <div class="card-body" style="height:150px;width:250px;">
-            <span class="card-title" style="-webkit-box-orient: vertical;
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            overflow: hidden;
-            text-overflow: ellipsis;
-          ">{{news.title}}</span>
+    <ng-template let-News pTemplate="item">
+        <div class="card mx-4 card-hover my-2 btn border border-2 border-warning mx-1 text-capitalize text-success" type="button" data-bs-toggle="modal"   [attr.data-bs-target]='"#"+removeSpaceFromString(News.title)' >
+          <div class="card-body row">
+            <h6 class="col-12">{{News.date}}</h6>
+            <img style="max-height: 170px;max-width: 200px;" class="col-4 m-1" src={{News.imgSrc}}  >
+            <div class="col-7" style="height: 200px;overflow-y: hidden;">{{News.title}}</div>
+            <button type="button" class="col btn btn-light" >Click to Enlarge</button>
           </div>
         </div>
+        <!-- Modal Code -->
+<!-- Modal Code end -->
       </ng-template>
     </p-carousel>
   </div>
@@ -89,43 +76,40 @@ Providing state of the art solutions to complex problems in water research such 
     </ng-container>
   </div> -->
   <!-- Chairman message -->
-<section class="container-fluid p-md-5 mt-sm-2 bg-light">
+<section class="container-fluid p-md-5 mt-sm-2 ">
   <div class="row p-md-5">
-    <div class="col">
-      <h1>Chairman's Message</h1>
-      <br />
-      <img src="../../../assets/images/Faculty/PRamamurthy.png" class="m-2 float-end imgshadow" alt="">
-      <p style="font-size:small ;">
+      <h1 class="col-12">Chairman's Message</h1>
+      <img src="../../../assets/images/Faculty/PRamamurthy.png" class=" float-end imgshadow col-md-3 col-sm-12" alt="">
+      <p class="col-md-9 col-sm-12 ">
         {{data.chairmanMsg}}
       </p>
-    </div>
   </div>
 </section>
     <!----------  ---------------------------- News Component ---------------------------  --------->
-<div class="container justify-content-center text-center p-md-5" >
-  <h1 class="p-5">Seminars</h1>
+<div class="container-fluid px-md-3 justify-content-center text-center p-md-5 bg-light" >
+  <h1 class="p-5">Upcoming Seminars</h1>
   <div class="m-2 card-deck">
-    <p-carousel [value]="newsJsonProcessed"
-      [numVisible]="screenWidth<768?1:screenWidth<1200?2:3"
+    <p-carousel [value]="seminarsForDisplay"
+      [numVisible]="screenWidth<768?1:screenWidth<1200?2:4"
       [numScroll]="1"
       [autoplayInterval]="2500"
       [circular]="true"
       [showIndicators]="false"
-      [showNavigators]="false">
-      <ng-template let-news pTemplate="item">
+      [showNavigators]="true">
+      <ng-template let-Seminars pTemplate="item">
         <div class="card mx-5">
-          <img src="http://icwar.iisc.ac.in/wp-content/uploads/2018/02/IMG_1331-1024x768.jpg" class="card-img-top hover-zoom " alt="...">
-          <div class="card-body">
-            <div class="card-title row-cols-2 row px-1"  style="vertical-align: middle;">
-              <span class="col ps-3 pt-2" style="border:3px solid rgb(216, 193, 61);width: 70px;height: 80px;"><h3>18</h3><h6>May</h6></span>
-              <h5 class="col" style="-webkit-box-orient: vertical;
+          <img [src] = "Seminars['imgSrc']" class="card-img-top hover-zoom " alt="...">
+          <div class="card-body row">
+            <div class="card-title"  style="vertical-align: middle;">
+                <h6 style="border:3px solid rgb(216, 193, 61);max-height: 80px;" class="col-12">{{Seminars['Date and Time']}}</h6>
+              <h6 class="col-12" style="-webkit-box-orient: vertical;
               display: -webkit-box;
               -webkit-line-clamp: 4;
               overflow: hidden;
               text-overflow: ellipsis;
-            ">{{news.title}}</h5>
+            ">{{Seminars.title}}</h6>
             </div>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <!-- <p class="card-text">{{News.abstract}}</p> -->
           </div>
         </div>
       </ng-template>
@@ -133,7 +117,7 @@ Providing state of the art solutions to complex problems in water research such 
   </div>
 </div>
     <!-- Vision and Mission Tab  -->
-<div class="container-fluid bg-light p-5">
+<div class="container-fluid p-5">
   <h4>Vision and Mission</h4>
   <div class="text-body line" [style.line-height]="screenWidth<786?'20px':'40px'">
     The mission of ICWaR, is to be a global leader in providing integrated solutions for Water Hazard and Risk Management/ Risk Reduction to improve the quality of life of the Communities.
@@ -148,18 +132,37 @@ Providing state of the art solutions to complex problems in water research such 
   </div>
 </div>
 <!-- OutReach -->
-<div class="row container-fluid p-5 justify-content-center align-items-center" style="background-color: rgba(168, 168, 164, 0.279);">
-  <h1 class="text-left p-1">Outreach</h1>
-  <div class="col-md-5 m-1 col-sm-12 " >
+<div class="row m-1 text-center d-flex p-5 justify-content-center align-items-center" style="background-color: rgba(168, 168, 164, 0.279);">
+  <h1 class="text-center p-5">Outreach</h1>
+  <div class="col-md-6  col-sm-12 " >
   <h3>Floods in a changing climate</h3>
   <div class="embed-responsive embed-responsive-4by3">
-    <iframe class="col-md-6 col-sm-12" src="https://www.youtube.com/embed/yTR90oWjb5M?si=MctWx8lFxxH-2u5L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe class="youtube-link-dynamic" src="https://www.youtube.com/embed/yTR90oWjb5M?si=MctWx8lFxxH-2u5L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 </div>
 <div class="col-md-6 col-sm-12" >
 <h3>Vulnerability of Water Resources to Climate Change</h3>
     <div class="embed-responsive embed-responsive-4by3">
-      <iframe class="col-md-6 col-sm-12" src="https://www.youtube.com/embed/2-tiGpm4Pao?si=2kycxSImpqsFujXt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe class="youtube-link-dynamic" src="https://www.youtube.com/embed/2-tiGpm4Pao?si=2kycxSImpqsFujXt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 </div>
 </div>
+
+<ng-container *ngFor="let News of newsJsonProcessed">
+  <div class="modal" id={{removeSpaceFromString(News.title)}}>
+    <div class="modal-dialog modal-lg modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+      <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">{{News.title}}</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+      <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ng-container>

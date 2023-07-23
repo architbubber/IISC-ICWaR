@@ -19,16 +19,16 @@
   </div>
 </div>
 <div *ngIf="dataType!='nested'" class="container-fluid justify-content-center " style="background-image: url('') ;background-size: cover;background-repeat: no-repeat;">
-  <h1 class="p-4 text-center text-capitalize font-weight-bolder" style="font-family:Arial, Helvetica, sans-serif;">{{designationNames[0]}}</h1>
+  <h1 class="p-4 text-center text-capitalize font-weight-bolder text-dark" style="font-family:Arial, Helvetica, sans-serif;">{{designationNames[0]}}</h1>
   <div class="row justify-content-center ">
-    <ng-container class="row container " *ngFor="let row of staffUnderDesignation" >
-      <div class="card col-md-2 col-sm-12 m-1 " style="box-shadow: 1px 1px 30px 1px rgb(58, 57, 57);background-color: rgb(86, 85, 85);" >
+    <ng-container *ngFor="let row of staffUnderDesignation" >
+      <div class="card col-md-2 col-sm-12 m-1 " style="box-shadow: 1px 1px 30px 1px rgb(30, 26, 26);background-color: rgba(243, 235, 235, 0.243);" >
         <img class="p-1 pb-0 m-1 card-img card-img-top shadow border border-info"  [src]="row.imgSrc"/>
-        <h4 class="card-title card-header" style="font-size: small;font-weight: bold;">{{row.name}}</h4>
-        <div class="card-body " style="max-height:200px;overflow-y: scroll;bottom: 100px;">
+        <h4 class="card-title text-dark card-header" style="font-size: small;font-weight: bold;">{{row.name}}</h4>
+        <div class="card-body text-dark" style="max-height:200px;overflow-y: scroll;bottom: 100px;">
           <div class="row card-text d-flex text-white" *ngFor="let key of getKeysFromJson(row)">
-            <div *ngIf="key!='name' &&  key!='imgSrc'" class="col-6 font-weight-bold">{{key}}</div>
-            <div *ngIf="key!='name' &&  key!='imgSrc'" class="col-6" style="font-size: smaller;">{{row[key]}}</div>
+            <div *ngIf="key!='name' &&  key!='imgSrc'" class="col-6 text-dark font-weight-bold">{{key}}</div>
+            <div *ngIf="key!='name' &&  key!='imgSrc'" class="col-6 text-dark" style="font-size: smaller;">{{row[key]}}</div>
           </div>
         </div>
         </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { seminars } from 'src/data-entries/json/Seminars';
 import { publications } from 'src/data-entries/json/publications';
 
@@ -13,6 +14,9 @@ export class SeminarsAndPublicationsComponent {
   publications = publications;
   nameOfDataToRender = [] = Object.keys(seminars);
 
+  constructor(private router: Router ) {
+
+  }
   ngAfterViewInit(){
     this.nameOfDataToRender.push('Publications');
     this.nameOfDataToRender.forEach(name=>

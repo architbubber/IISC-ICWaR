@@ -1,40 +1,108 @@
-<div class="bg-img align-content-center row justify-content-center" style="background-image: url('../../../assets/images/research_!/waterDroplet.png');">
-  <div class="card shadow col-md-3 offset-md-4  col-sm-12 m-4" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
-    <div class="card-body justify-content-center align-items-center d-flex">
-      <h2 class="card-title">Research Theme</h2>
+<div style="height: 40vh; background-size: cover; background-image: url('https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2019/11/p-1-90427630-150-years-of-scientific-research-visualized-as-a-single-mesmerizing-network.png');">
+  <div class="color-overlay align-items-center align-middle row justify-content-center p-4">
+    <h1 class="text-center text-white col-12"> Research</h1>
+  </div>
+</div>
+<div class="px-5" style="background-color:white;">
+  <div class="col-12 m-2 py-1 text-center">
+    <h2>Research Theme</h2>
+  </div>
+  <div class="row my-5">
+    <img class="col-12 m-2" [src]="data.research_theme.imgSrc" height="400px" width="500px">
+    <span class="d-none d-md-inline" style="width: 3px"></span>
+  </div>
+  <div class="row my-5">
+    <div class="col-md-5 col-sm-12 m-2 py-1 ">
+      <h2>Research Vignettes</h2>
+      <p>The value of soil moisture measurement in many research, industrial and agricultural fields are necessary for managing water resources effectively. However, collecting data from the field is time-consuming and can be expensive. To automate data collection and data logging, a system was developed using the proven Watermark solid state, electric resistance type sensor and cellular network and internet database real-time monitoring. Now, the STMS can wirelessly download data from soil moisture and temperature sensors directly into your computer from any part of the world.</p>
+    </div>
+    <span class="d-none d-md-inline" style="width: 3px"></span>
+    <img class="col-md-6 col-sm-12 m-2  img-thumbnail "src="../../../assets/images/Centres and Facilities/STMS.jpg">
+  </div>
+
+  <div class="row my-5">
+    <div class="col-12 m-2 py-1 justify-content-center text-center">
+      <h2>Research Projects</h2>
+      </div>
+    <div class="col-12 m-2" style="overflow-y: scroll;max-height:500px ;">
+      <table class="table table-bordered border-3 border-dark table-hover table-responsive table-striped ">
+        <tr class="bg-success header text-center  text-capitalize" style="height: 50px;position: sticky;top:0">
+          <td >Title</td>
+          <td>Investigators</td>
+          <td>Sponsors</td>
+        </tr>
+      <ng-container *ngFor="let key of getJsonKeys(data.research_projects);index as i">
+        <tr class="text-center bg-warning border border-1 border-dark">
+          <td class="text-center font-weight-bolder" style="height: 30px;" colspan="3">{{key}}</td>
+        </tr>
+        <tbody class="table-striped">
+        <ng-container *ngFor="let row of getValueForKey(key,data.research_projects)">
+            <tr *ngIf="key!='Abbreviations'">
+            <td>{{row.Title}}</td>
+            <td>{{row.Investigators}}</td>
+            <td>{{row.Sponsor}}</td>
+          </tr>
+          <tr *ngIf="key=='Abbreviations'" >
+            <td>{{getJsonKeys(row)}}</td>
+            <td colspan="2">{{row[getJsonKeys(row)[0]]}}</td>
+          </tr>
+          </ng-container>
+        </tbody>
+      </ng-container>
+      </table>
     </div>
   </div>
-  <div class="card shadow col-md-3 offset-md-4 col-sm-12 m-4" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
-    <div class="card-body justify-content-center align-items-center d-flex " >
-      <h2 class="card-title">Research Vignettes</h2>
+
+  <div class="my-5">
+    <div class="col-12 m-2 py-1 text-center">
+      <h2>Collaborations</h2>
     </div>
-  </div>
-  <div class="card shadow col-md-3 offset-md-4  col-sm-12 m-4" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
-    <div class="card-body justify-content-center align-items-center d-flex">
-      <h2 class="card-title">Research Projects</h2>
-    </div>
-  </div>
-  <div class="card shadow col-md-3 offset-md-4  col-sm-12 m-4" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
-    <div class="card-body justify-content-center align-items-center d-flex">
-      <h2 class="card-title">Collaborations</h2>
+    <div class="col-12 row m-2 d-flex justify-content-center ">
+      <ng-container *ngFor="let row of data.collaborations">
+        <div class="row col-md-4 my-2">
+          <img class="col-12" style="max-width: 400px;max-height: 500px;" [src]="row.imgSrc">
+          <h4 class="col-12 font-weight-bold">{{row.title}}</h4>
+          <h6 class="col-12">{{row.details}}</h6>
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>
 
-<!-- The Modal -->
-<div class="modal" id="myModal">
-  <div class="modal-dialog modal-lg modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable">
+
+<!-- <div class="bg-img align-content-center row justify-content-center" >
+  <div class="card shadow col-md-4 offset-md-4  col-sm-12 m-4" type="button" data-bs-toggle="modal" data-bs-target="#research_theme_modal" >
+    <div class="card-body justify-content-center align-items-center d-flex">
+      <h2 class="card-title">Research Theme</h2>
+    </div>
+  </div>
+  <div class="card shadow col-md-4 offset-md-4 col-sm-12 m-4" type="button" data-bs-toggle="modal" data-bs-target="#research_vignettes_modal">
+    <div class="card-body justify-content-center align-items-center d-flex " >
+      <h2 class="card-title">Research Vignettes</h2>
+    </div>
+  </div>
+  <div class="card shadow col-md-4 offset-md-4  col-sm-12 m-4" type="button" data-bs-toggle="modal" data-bs-target="#research_projects_modal">
+    <div class="card-body justify-content-center align-items-center d-flex">
+      <h2 class="card-title">Research Projects</h2>
+    </div>
+  </div>
+  <div class="card shadow col-md-4 offset-md-4  col-sm-12 m-4" type="button" data-bs-toggle="modal" data-bs-target="#collaborations_modal">
+    <div class="card-body justify-content-center align-items-center d-flex">
+      <h2 class="card-title">Collaborations</h2>
+    </div>
+  </div>
+</div> -->
+
+<div class="modal" id="research_theme_modal">
+  <div class="modal-dialog modal-lg modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable w-75">
     <div class="modal-content">
-    <!-- Modal Header -->
       <div class="modal-header">
         <h4 class="modal-title">Research Theme</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
-    <!-- Modal body -->
       <div class="modal-body">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, ducimus repellendus autem blanditiis nihil natus consequuntur quis quibusdam ipsa explicabo nobis, nam doloremque sit repudiandae eius cumque hic? Neque atque voluptas voluptatum cupiditate, obcaecati libero, inventore provident aperiam temporibus, consectetur molestias eius. Maxime consectetur autem laboriosam atque dolorum enim dolorem ipsa recusandae voluptates distinctio! Atque provident, quidem exercitationem suscipit reiciendis beatae quod quas explicabo quae corrupti velit aut. Numquam dignissimos ipsam consequuntur blanditiis nihil libero hic laborum quo! Dicta in maiores expedita illum recusandae. Quas provident labore officiis placeat ut harum officia omnis suscipit exercitationem? Error sunt porro suscipit. Ipsam blanditiis tempora quibusdam mollitia officia quas adipisci dolorem iste quidem enim eius vitae aspernatur iure culpa aliquam voluptatum, modi voluptas asperiores quae commodi quasi laudantium earum perspiciatis. Fugiat necessitatibus sapiente modi tempore voluptatem, reprehenderit saepe iusto magni quidem, vero ex culpa! Porro fuga iure saepe sunt eos excepturi incidunt quas adipisci id dolorem labore numquam reiciendis magnam aliquam, inventore explicabo voluptatum, accusantium sapiente asperiores similique? Facere, nam. Error praesentium assumenda aliquam aspernatur officiis repellendus dolores omnis dolorum perspiciatis impedit quis odit sit nostrum illum nesciunt, atque tempore exercitationem cupiditate. Non porro facere expedita beatae totam sequi libero fuga magni accusantium eos laboriosam autem quasi officiis ipsam nulla obcaecati praesentium impedit, repellat necessitatibus optio. Enim facilis dolore omnis quos dolorum laborum, quam ab, nobis temporibus rerum alias. Veniam delectus dolore quo minus debitis eius quae sit? Voluptatibus repellat sapiente, omnis commodi neque illo sunt incidunt quaerat enim distinctio fugit ipsa molestiae quod laborum adipisci voluptate. Placeat, quae modi eveniet fuga dolor soluta. Ullam vel necessitatibus voluptas minus. Ab quis nostrum corporis numquam autem sequi consequatur quas! Vitae perferendis similique et distinctio necessitatibus praesentium nemo, molestiae laboriosam eum quam cumque numquam modi quibusdam adipisci itaque eaque, voluptatibus excepturi temporibus repellat veniam. Quam?
+        <img [src]="data.research_theme.imgSrc">
       </div>
-    <!-- Modal footer -->
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
       </div>
@@ -42,3 +110,86 @@
   </div>
 </div>
 
+<div class="modal" id="research_vignettes_modal">
+  <div class="modal-dialog modal-lg modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable w-75">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Research Vignetttes</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body row">
+        <ng-container *ngFor="let row of data.research_vignettes">
+          <img class="col-12" [src]="row.imgSrc">
+          <p>{{row.details}}</p>
+        </ng-container>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="collaborations_modal">
+  <div class="modal-dialog modal-lg modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable w-75">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="text-center modal-title">Collaborations</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ng-container *ngFor="let row of data.collaborations">
+          <div class="row my-2">
+          <img class="col-md-4 col-sm-12" [src]="row.imgSrc">
+          <h4 class="col-md-4 col-sm-12 font-weight-bold">{{row.title}}</h4>
+          <h6 class="col-md-4 col-sm-12">{{row.details}}</h6>
+        </div>
+        </ng-container>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="research_projects_modal">
+  <div class="modal-dialog modal-lg modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable w-75">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Research Projects</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body ">
+        <table class="table table-bordered border-3 border-dark table-hover table-responsive table-striped ">
+          <tr class="bg-success header text-center  text-capitalize" style="height: 50px;">
+            <td >Title</td>
+            <td>Investigators</td>
+            <td>Sponsors</td>
+          </tr>
+        <ng-container *ngFor="let key of getJsonKeys(data.research_projects);index as i">
+          <tr class="text-center bg-warning border border-1 border-dark">
+            <td class="text-center font-weight-bolder" style="height: 30px;" colspan="3">{{key}}</td>
+          </tr>
+          <tbody class="table-striped">
+          <ng-container *ngFor="let row of getValueForKey(key,data.research_projects)">
+              <tr *ngIf="key!='Abbreviations'">
+              <td>{{row.Title}}</td>
+              <td>{{row.Investigators}}</td>
+              <td>{{row.Sponsor}}</td>
+            </tr>
+            <tr *ngIf="key=='Abbreviations'" >
+              <td>{{getJsonKeys(row)}}</td>
+              <td colspan="2">{{row[getJsonKeys(row)[0]]}}</td>
+            </tr>
+            </ng-container>
+          </tbody>
+        </ng-container>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

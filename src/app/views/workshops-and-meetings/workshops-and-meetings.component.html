@@ -1,0 +1,26 @@
+<div class="bg-light justify-content-center align-items-center d-flex w-100 row">
+  <h3 class=" col-12 text-center">Workshops And Meetings</h3>
+
+  <table class="table table-responsive table-hover table-active table table-bordered " style="max-width: 50vw;">
+    <tr class="bg-success text-center text-capitalize border border-1" style="height: 50px;position: sticky;top: 0;vertical-align: middle;">
+        <th>Date</th>
+        <th>Title</th>
+        <th>Details</th>
+        <th>Images</th>
+    </tr>
+    <tbody class="table-striped table-bordered">
+    <ng-container *ngFor="let item of workshops">
+      <tr class="border border-bottom-3 border-1 border-dark" style="vertical-align: middle;" >
+        <td class="border border-1 border-dark" >{{item.Date}}</td>
+          <td class="border border-1 border-dark" >{{item.Title}}</td>
+          <td class="border border-1 border-dark" >{{item.Details}}</td>
+          <td class="border border-1 border-dark">
+            <ng-container *ngFor="let row of item.imgsArray">
+              <img style="max-width: 200px;" src={{row}}/>
+            </ng-container>
+          </td>
+        </tr>
+    </ng-container>
+  </tbody>
+  </table>
+</div>

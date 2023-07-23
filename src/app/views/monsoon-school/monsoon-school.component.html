@@ -1,0 +1,10 @@
+<div class="d-flex justify-content-center align-content-center align-items-center">
+  <ng-container *ngFor="let year of getJsonKeys(monsoonPageData);index as i">
+    {{year}}
+    <ng-container *ngFor="let row of getJsonValues(monsoonPageData)[i];index as j">
+      {{row}}
+    </ng-container>
+
+  </ng-container>
+
+</div>

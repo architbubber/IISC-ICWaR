@@ -14,22 +14,19 @@
 //                                                                                                                             //
 /*******************************************************************************************************************************/
 export const configurations = {
+
   "spreeMailUrl":"https://formspree.io/f/xzblzjgk",
+
   "navbar":{
     'style':{
-      'background-color':'#0e0e0e',
-      'z-index': 100,
-      'box-shadow': '1px 1px 10px 3px rgb(251, 178, 178)',
-      'position': 'sticky',
-      'top':0
+      // 'background-color':'#0e0e0e',
+      'box-shadow': '1px 1px 10px 3px rgb(251, 178, 178)'
     }
   },
+
   "footer":{
     "style":{
        "background-color": "#0e0e0e",
-       "line-height": "25px",
-       "border-top": "5px solid rgb(205, 14, 27)",
-       "max-width": "100vw"
     }
   }
 }

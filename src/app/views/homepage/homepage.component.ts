@@ -1,9 +1,9 @@
+// import { News } from './homepage.service';
 import { Component } from '@angular/core';
 import {homepageData} from '../../../data-entries/json/homepage';
 import { newsJson } from '../../../data-entries/json/news';
-import 'jquery';
-import { News } from './homepage.service';
-import { STRING_TYPE } from '@angular/compiler';
+import * as $ from 'jquery';
+import { seminars } from 'src/data-entries/json/Seminars';
 
 
 @Component({
@@ -13,12 +13,13 @@ import { STRING_TYPE } from '@angular/compiler';
 })
 export class HomepageComponent {
   public newsJsonProcessed: any;
-  public news :any;
+  public news  = newsJson;
   public  data = homepageData;
   public screenWidth: any;
   public screenHeight: any;
   public slides = homepageData.slides
-
+  stringArr =[];
+  seminarsForDisplay:Seminars[] = (<any[]>seminars['ICWaR Guest Seminar Series']);
 
   responsiveOptions = [{
     breakpoint: '1024px',
@@ -31,46 +32,33 @@ export class HomepageComponent {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
     this.newsJsonProcessed = newsJson;
-    (<any>$('.start-cover-animation h1')).html(this.processCoverStirng());
+    console.log(this.seminarsForDisplay)
 
-    // var arr:[] = (<any>$('.start-cover-animation span'));
-
-    var count = 0;
-      setTimeout(()=>{
-        (<any>$('.start-cover-animation h1')).children()[count].hide();
-        count+=1;
-      },1000
-      );
-
-    // setTimeout (()=>{
-    //   (<any>$('.start-cover-animation')).hide()},5000
-    // );
-    (<any>$('.start-cover-animation')).hide();
-    console.log(this.newsJsonProcessed[0].title)
-
-    this.news = [
-      {random: 'Random', src: 'https://picsum.photos/id/944/900/500'},
-      {random: 'Samoa', src: 'https://picsum.photos/id/1011/900/500'},
-      {random: 'Tonga', src: 'https://picsum.photos/id/984/900/500'},
-      {random: 'Cook Island', src: 'https://picsum.photos/id/944/900/500'},
-      {random: 'Niue', src: 'https://picsum.photos/id/1011/900/500'},
-      {random: 'American Samoa', src: 'https://picsum.photos/id/984/900/500'}
-  ];
   }
   ngAfterInit():void{
-    console.log("Now "+(<any>$('.start-cover-animation > h1')).text());
+    // console.log("Now "+(<any>$('.start-cover-animation > h1')).text());
   }
-  products = [{id: "1000", code: "f230fh0g3", name: "Bamboo Watch", description: "Product Description",
-  category: "Accessories",
-}]
 
-processCoverStirng():string{
-  var s = '';
-  var tmp = (<any>$('.start-cover-animation h1')).text();
-  for(var i=0;i<tmp.length;i++)
-    s += '<span>'+tmp[i]+'</span>';
-
-  return s;
+redirectTo(link:string){
+  window.location.href=link;
+}
+removeSpaceFromString(str:string){
+  return str.replaceAll(' ','_')
 }
 
+}
+export interface Seminars{
+  imgSrc: string;
+  'title': string;
+  'Name of the speaker':string;
+  'Title of the Seminar':string;
+  'Date and Time':string
+  'Online Platform':string;
+  'About the Speaker':string
+  'Abstract':string
+}
+export interface News{
+  title: string;
+  imgSrc: string;
+  date:string
 }

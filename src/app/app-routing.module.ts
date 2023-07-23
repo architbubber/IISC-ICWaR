@@ -8,6 +8,8 @@ import { ResearchComponent } from './views/research/research.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { CentresAndFacilitiesComponent} from './views/centres-and-facilities/centres-and-facilities.component';
 import { SeminarsAndPublicationsComponent } from './views/seminars-and-publications/seminars-and-publications.component';
+import { WorkshopsAndMeetingsComponent } from './views/workshops-and-meetings/workshops-and-meetings.component';
+import { MonsoonSchoolComponent } from './views/monsoon-school/monsoon-school.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -15,7 +17,12 @@ const routes: Routes = [
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'research', component: ResearchComponent},
-  {path: 'seminars-and-publications', component: SeminarsAndPublicationsComponent},
+  {path: 'events',children:[
+    {path:'seminars-and-publications',component: SeminarsAndPublicationsComponent},
+    {path:'workshop-and-meetings',component: WorkshopsAndMeetingsComponent},
+    {path:'monsoon-school',component: MonsoonSchoolComponent},
+    ]
+  },
   {path: 'centres-and-facilities', component: CentresAndFacilitiesComponent},
   {path:'**',component:PageNotFoundComponent}
 
@@ -24,6 +31,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}]
+  providers: []
 })
 export class AppRoutingModule { }

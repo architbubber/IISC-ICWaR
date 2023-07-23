@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import * as $ from 'jquery';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
+import * as data from '../../../data-entries/json/research';
+import 'jquery';
 
 @Component({
   selector: 'app-research',
@@ -7,13 +8,27 @@ import * as $ from 'jquery';
   styleUrls: ['./research.component.scss']
 })
 export class ResearchComponent {
-  // $:any;
+  data=data;
+  modalService: any;
+  @ViewChild('template') templateRef: TemplateRef<any> | undefined;
+
   ngOnInit(): void {
-    // $("#textFade").hide();
-    // $("#textFade").fadeIn("slow");
 
   }
-  openModal(){
-    // $("#myModal").show();
+  getJsonKeys(data:any):string[]{
+    return Object.keys(data);
   }
+  getValueForKey(key:string,data:any):any[]{
+    let result:any;
+     Object.entries(data).forEach(f=>{
+      if(f[0]==key)
+        result =  f[1];
+    })
+
+    return result;
+  }
+  openModal(modalId: TemplateRef<any>){
+    this.modalService.open(modalId);
+    }
+
 }
