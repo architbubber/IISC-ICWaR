@@ -48,13 +48,11 @@ Providing state of the art solutions to complex problems in water research such 
         <div class="card mx-4 card-hover my-2 btn border border-2 border-warning mx-1 text-capitalize text-success" type="button" data-bs-toggle="modal"   [attr.data-bs-target]='"#"+removeSpaceFromString(News.title)' >
           <div class="card-body row">
             <h6 class="col-12">{{News.date}}</h6>
-            <img style="max-height: 170px;max-width: 200px;" class="col-4 m-1" src={{News.imgSrc}}  >
+            <img style="width: 200px;height: 200px;" class="col m-1" src={{News.imgSrc}}  >
             <div class="col-7" style="height: 200px;overflow-y: hidden;">{{News.title}}</div>
             <button type="button" class="col btn btn-light" >Click to Enlarge</button>
           </div>
         </div>
-        <!-- Modal Code -->
-<!-- Modal Code end -->
       </ng-template>
     </p-carousel>
   </div>
@@ -157,6 +155,7 @@ Providing state of the art solutions to complex problems in water research such 
           <h4 class="modal-title">{{News.title}}</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
+        <img src={{News.imgSrc}} >
       <!-- Modal footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
@@ -164,5 +163,4 @@ Providing state of the art solutions to complex problems in water research such 
       </div>
     </div>
   </div>
-
 </ng-container>
