@@ -19,7 +19,7 @@ export const configurations = {
 
   "navbar":{
     'style':{
-      // 'background-color':'#0e0e0e',
+      'background-color': 'rgb(6, 127, 178)',
       'box-shadow': '1px 1px 10px 3px rgb(251, 178, 178)'
     }
   },
