@@ -1,5 +1,6 @@
 export const gallery = {
-  'Open Day':[
+  'Open Day':{
+    '2019':[
     {
       'imgSrc':'',
       'caption':""
@@ -8,5 +9,5 @@ export const gallery = {
       'imgSrc':'',
       'caption':""
     }
-  ]
+  ]}
 }
