@@ -30,8 +30,8 @@ Providing state of the art solutions to complex problems in water research such 
   </div>
 </div> -->
 <!-- Latest News -->
-<div class="container-fluid m-1 bg-light py-5">
-  <div class="container-fluid justify-content-center m-1 p-1" style="max-width: 100vw;">
+<!-- <div class="container-fluid m-1 bg-light py-5"> -->
+  <div class="d-flex justify-content-center bg-light row m-1 p-5 w-100" >
     <p-carousel [value]="newsJsonProcessed"
       [numVisible]="screenWidth<768?1:3"
       [numScroll]="1"
@@ -45,18 +45,18 @@ Providing state of the art solutions to complex problems in water research such 
         </h3>
     </ng-template>
     <ng-template let-News pTemplate="item">
-        <div class="card mx-4 card-hover my-2 btn border border-2 border-warning mx-1 text-capitalize text-success" type="button" data-bs-toggle="modal"   [attr.data-bs-target]='"#"+removeSpaceFromString(News.title)' >
+        <div class="card mx-4 card-hover my-2 btn border border-2 border-danger mx-1 text-capitalize text-success" type="button" data-bs-toggle="modal"   [attr.data-bs-target]='"#"+removeSpaceFromString(News.title)' style="background-color: rgba(202, 175, 155, 0.162);">
           <div class="card-body row">
             <h6 class="col-12">{{News.date}}</h6>
             <img style="width: 200px;height: 200px;" class="col m-1" src={{News.imgSrc}}  >
-            <div class="col-7" style="height: 200px;overflow-y: hidden;">{{News.title}}</div>
+            <div class="col-md-7 col-sm-12" style="height: 200px;overflow-y: hidden;">{{News.title}}</div>
             <button type="button" class="col btn btn-light" >Click to Enlarge</button>
           </div>
         </div>
       </ng-template>
     </p-carousel>
   </div>
-</div>
+<!-- </div> -->
 
 <!-- <div class="d-flex flex-row flex-nowrap overflow-auto justify-content-center"> -->
   <!-- <h3 style="text-align: center;">Highlights</h3> -->
