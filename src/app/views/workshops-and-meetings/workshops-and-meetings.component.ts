@@ -7,4 +7,7 @@ import { workshops } from 'src/data-entries/json/workshops';
 })
 export class WorkshopsAndMeetingsComponent {
 workshops = workshops;
+removeSpaceFromString(str:string){
+  return str.replaceAll(' ','_')
+}
 }

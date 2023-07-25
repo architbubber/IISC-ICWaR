@@ -1,30 +1,24 @@
-<div style="height: 40vh; background-size: cover; background-image: url('https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2019/11/p-1-90427630-150-years-of-scientific-research-visualized-as-a-single-mesmerizing-network.png');">
+<!-- <div style="height: 40vh; background-size: cover; background-image: url('https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2019/11/p-1-90427630-150-years-of-scientific-research-visualized-as-a-single-mesmerizing-network.png');">
   <div class="color-overlay align-items-center align-middle row justify-content-center p-4">
     <h1 class="text-center text-white col-12"> Research</h1>
   </div>
-</div>
-<div class="px-5" style="background-color:white;">
-  <div class="col-12 m-2 py-1 text-center">
-    <h2>Research Theme</h2>
+</div> -->
+<div class="d-flex justify-content-center p-5" style="background-image: url('https://thumbs.dreamstime.com/b/white-atom-icon-isolated-grey-background-symbol-science-education-nuclear-physics-scientific-research-k-white-atom-icon-206008404.jpg');background-size: cover;">
+  <div style="max-width: 70vw;">
+<tabset>
+  <tab heading="Research Theme">
+    <img  [src]="data.research_theme.imgSrc">
+  </tab>
+  <tab heading="Research Vignettes">
+  <div class="row my-5" style="max-height: 60vh;overflow-y: scroll;">
+      <ng-container *ngFor="let row of data.research_vignettes">
+        <img class="col-12" [src]="row.imgSrc">
+        <p>{{row.details}}</p>
+      </ng-container>
   </div>
+</tab><tab heading="Research Projects">
   <div class="row my-5">
-    <img class="col-12 m-2" [src]="data.research_theme.imgSrc" height="400px" width="500px">
-    <span class="d-none d-md-inline" style="width: 3px"></span>
-  </div>
-  <div class="row my-5">
-    <div class="col-md-5 col-sm-12 m-2 py-1 ">
-      <h2>Research Vignettes</h2>
-      <p>The value of soil moisture measurement in many research, industrial and agricultural fields are necessary for managing water resources effectively. However, collecting data from the field is time-consuming and can be expensive. To automate data collection and data logging, a system was developed using the proven Watermark solid state, electric resistance type sensor and cellular network and internet database real-time monitoring. Now, the STMS can wirelessly download data from soil moisture and temperature sensors directly into your computer from any part of the world.</p>
-    </div>
-    <span class="d-none d-md-inline" style="width: 3px"></span>
-    <img class="col-md-6 col-sm-12 m-2  img-thumbnail "src="../../../assets/images/Centres and Facilities/STMS.jpg">
-  </div>
-
-  <div class="row my-5">
-    <div class="col-12 m-2 py-1 justify-content-center text-center">
-      <h2>Research Projects</h2>
-      </div>
-    <div class="col-12 m-2" style="overflow-y: scroll;max-height:500px ;">
+    <div class="col-12 m-2" style="overflow-y: scroll;">
       <table class="table table-bordered border-3 border-dark table-hover table-responsive table-striped ">
         <tr class="bg-success header text-center  text-capitalize" style="height: 50px;position: sticky;top:0">
           <td >Title</td>
@@ -52,11 +46,11 @@
       </table>
     </div>
   </div>
-
+</tab><tab heading="Collaborations">
   <div class="my-5">
-    <div class="col-12 m-2 py-1 text-center">
+    <!-- <div class="col-12 m-2 py-1 text-center">
       <h2>Collaborations</h2>
-    </div>
+    </div> -->
     <div class="col-12 row m-2 d-flex justify-content-center ">
       <ng-container *ngFor="let row of data.collaborations">
         <div class="row col-md-4 my-2">
@@ -67,7 +61,11 @@
       </ng-container>
     </div>
   </div>
+</tab>
+</tabset>
 </div>
+</div>
+<!-- </div> -->
 
 
 <!-- <div class="bg-img align-content-center row justify-content-center" >
@@ -193,3 +191,4 @@
     </div>
   </div>
 </div>
+

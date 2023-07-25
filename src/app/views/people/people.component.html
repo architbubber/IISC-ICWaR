@@ -1,7 +1,8 @@
+<div style="background-image: url('https://img.freepik.com/free-vector/blue-pink-halftone-background_53876-99004.jpg?w=2000&t=st=1690227672~exp=1690228272~hmac=322c4a4037ab28c52fb2654282a4aded2ea8514d6b8b7f91c07350734d17f5cb');background-size: cover;">
 <div *ngIf="dataType=='nested'" class="container justify-content-center ">
   <div class="p-5 row justify-content-start ">
     <div class="p-4" *ngFor="let parent of designationNames;index as i">
-      <h1 class="p-4 col-md-3 text-capitalize text-center text-dark">{{parent}}</h1>
+      <h1 class="p-4 col-md-3 text-capitalize text-center text-dark" >{{parent}}</h1>
       <div class="row">
       <ng-container *ngFor="let row of staffUnderDesignation[i]" >
         <div class="card col-md-2 m-1 " style="box-shadow: 1px 1px 10px 1px black;" >
@@ -19,7 +20,7 @@
   </div>
 </div>
 <div *ngIf="dataType!='nested'" class="container justify-content-center text-center py-3 px-sm-3" >
-  <h1 class="p-4 text-center text-capitalize font-weight-bolder text-dark text-center" >{{designationNames[0]}}</h1>
+  <h1 class="p-4 text-center text-capitalize font-weight-bolder text-dark text-center">{{designationNames[0]}}</h1>
   <div class="row justify-content-center ">
     <ng-container *ngFor="let row of staffUnderDesignation" >
       <div class="card col-md-2 col-sm-12 m-1 " style="box-shadow: 1px 1px 10px 1px black;" >
@@ -36,3 +37,4 @@
   </div>
 </div>
 
+</div>

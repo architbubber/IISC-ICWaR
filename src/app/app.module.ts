@@ -18,6 +18,8 @@ import { SeminarsAndPublicationsComponent } from './views/seminars-and-publicati
 import { WorkshopsAndMeetingsComponent } from './views/workshops-and-meetings/workshops-and-meetings.component';
 import { MonsoonSchoolComponent } from './views/monsoon-school/monsoon-school.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { GalleryComponent } from './views/gallery/gallery.component';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 
 @NgModule({
   declarations: [
@@ -30,12 +32,14 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
     CentresAndFacilitiesComponent,
     SeminarsAndPublicationsComponent,
     WorkshopsAndMeetingsComponent,
-    MonsoonSchoolComponent
+    MonsoonSchoolComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarouselModule
+    CarouselModule,
+    TabsModule
   ],
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent],

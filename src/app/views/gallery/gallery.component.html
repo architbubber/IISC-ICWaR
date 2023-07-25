@@ -1,0 +1,23 @@
+<div class="p-5" style="background-image: url('https://img.freepik.com/free-vector/blue-pink-halftone-background_53876-99004.jpg?w=2000&t=st=1690227672~exp=1690228272~hmac=322c4a4037ab28c52fb2654282a4aded2ea8514d6b8b7f91c07350734d17f5cb');background-size: cover;">
+  <h1 class="text-center" style="text-shadow: 2px 1px 10px white;">Media Gallery</h1>
+    <div class="p-md-5" >
+      <tabset>
+      <ng-container *ngFor="let key of getJsonKeys(gallery)">
+        <tab heading='{{key}}'>
+        <!-- <h1 class="col-12 p-2">{{key}}</h1> -->
+        <div class="p-md-5 col-12 my-1" style="background-color: rgba(228, 228, 228, 0.814);">
+        <ng-container *ngFor="let years of getJsonKeys(getValueForKey(gallery,key))">
+            <h3 class="p-3">{{years}}</h3>
+            <div class="row col-12 p-md-5 p-5">
+            <ng-container *ngFor="let img of getJsonValues(getValueForKey(getValueForKey(gallery,key),years))">
+                <img class="col-5 col-md-2 m-1 border border-1 border-info p-0" src="{{getValueForKey(img,'imgSrc')}}" >
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+    </tab>
+    </ng-container>
+  </tabset>
+  </div>
+</div>
+

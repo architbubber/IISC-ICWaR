@@ -1,16 +1,17 @@
-<div class="bg-light justify-content-center align-items-center d-flex w-100 row">
-  <h3 class=" col-12 text-center">Workshops And Meetings</h3>
+<div class="bg-light " style="background-image: url('https://wallpapers.com/images/hd/light-color-background-1eq9mtpjqjz9ddep.jpg');background-size: cover;">
+  <h1 class="p-md-5 col-12 font-weight-bolder text-center text-primary">Workshops And Meetings</h1>
 
-  <table class="table table-responsive table-hover table-active table table-bordered " style="max-width: 50vw;">
+  <!-- <table class="table table-responsive table-hover table-active table table-bordered " style="max-width: 80vw;">
     <tr class="bg-success text-center text-capitalize border border-1" style="height: 50px;position: sticky;top: 0;vertical-align: middle;">
         <th>Date</th>
         <th>Title</th>
         <th>Details</th>
         <th>Images</th>
-    </tr>
-    <tbody class="table-striped table-bordered">
-    <ng-container *ngFor="let item of workshops">
-      <tr class="border border-bottom-3 border-1 border-dark" style="vertical-align: middle;" >
+    </tr> -->
+    <!-- <tbody class="table-striped table-bordered"> -->
+      <div class="row ">
+    <ng-container *ngFor="let item of workshops;index as index">
+      <!-- <tr class="border border-bottom-3 border-1 border-dark" style="vertical-align: middle;" >
         <td class="border border-1 border-dark" >{{item.Date}}</td>
           <td class="border border-1 border-dark" >{{item.Title}}</td>
           <td class="border border-1 border-dark" >{{item.Details}}</td>
@@ -19,8 +20,26 @@
               <img style="max-width: 200px;" src={{row}}/>
             </ng-container>
           </td>
-        </tr>
+        </tr> -->
+        <div class="row text-center col-12 border-bottom-3 border-1 border-dark d-flex justify-content-center p-5" >
+          <h4 class="col col-md-2" >{{item.Date}}</h4>
+            <h5 class="col col-md-3"><b>{{item.Title}}</b></h5>
+            <button class="col-md-2 col-sm-3 offset-10 m-1 align-self-end btn btn-primary" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#'+index" aria-expanded="false" [attr.aria-controls]="index">
+              Read more
+            </button>
+            <div id={{index}} class="row py-4 col-md-7 col-12 collapse">
+            <h6 class="col-12">{{item.Details}}</h6>
+            <div class="col-12 row">
+              <ng-container *ngFor="let row of item.imgsArray">
+                <img class="col mb-2 col-md-6" src={{row}}/>
+              </ng-container>
+            </div>
+          </div>
+            <div class="w-50 my-5" style="height: 1px;background-color: black;"></div>
+          </div>
+
     </ng-container>
-  </tbody>
-  </table>
+  </div>
+  <!-- </tbody> -->
+  <!-- </table> -->
 </div>

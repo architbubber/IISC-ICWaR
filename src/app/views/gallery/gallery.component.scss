@@ -1,0 +1,14 @@
+::ng-deep tabset .nav-link {
+  font-size: 30px;
+  color: black;
+  // text-shadow: 1px 1px 1px black;
+  background-color: transparent;
+}
+::ng-deep tabset .nav-item {
+  background-color: transparent;
+}
+@media (max-width:768px) {
+  ::ng-deep tabset .nav-link {
+    font-size: 20px;
+  }
+}

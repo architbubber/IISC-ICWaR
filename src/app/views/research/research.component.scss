@@ -27,4 +27,29 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+::ng-deep tabset .nav-link {
+  font-size: 30px;
+  color: black;
+  // text-shadow: 1px 1px 1px black;
+  background-color: transparent;
+}
+::ng-deep tabset .nav-item {
+  background-color: transparent;
+}
+@media (max-width:768px) {
+  ::ng-deep tabset .nav-link {
+    font-size: 20px;
+  }
+}
+tab{
+  padding: 20px;
+  border: black solid 1px;
+  box-shadow: 1px 1px 10px rgb(171, 171, 255);
+  background-color: #ffffff;
+}
+::ng-deep tabset li:not(:active){
+  box-shadow: 1px 1px 10px rgba(0, 0, 255, 0.212);
+  background-color: rgba(127, 191, 255, 0.533);
+  border: black solid 3px;
+  border-radius: 5px;
+}

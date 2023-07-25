@@ -79,9 +79,8 @@ export const gallery = {
       'imgSrc':'../../assets/images/Gallery/Open_Day/OD_2020/OD_2020_9.jpg',
       'caption':""
     }
-  ]}
-};
-export const Freshers_Day = {
+  ]},
+'Freshers Day': {
   '2022':[
     {
       'imgSrc':'../../assets/images/Gallery/Freshers_Day/FD_2022/FD_2022_1.jpg',
@@ -132,4 +131,5 @@ export const Freshers_Day = {
       'caption':""
     }
   ]
+}
 }

@@ -6,7 +6,7 @@
   </div>
   <div class="carousel-inner">
     <ng-container *ngFor="let row of slides;index as i">
-      <div [ngClass]="i==0?'carousel-item active':'carousel-item'" class="carousel-item" data-bs-interval="1500">
+      <div [ngClass]="i==0?'carousel-item active':'carousel-item'" class="carousel-item" data-bs-interval="3000">
         <img class="d-block w-100" [src]=row >
         <!-- <div class="card-img-overlay overlay-dark"></div> -->
       </div>
@@ -78,9 +78,9 @@ Providing state of the art solutions to complex problems in water research such 
   <div class="row p-md-5">
       <h1 class="col-12">Chairman's Message</h1>
       <img src="../../../assets/images/Faculty/PRamamurthy.png" class=" float-end imgshadow col-md-3 col-sm-12" alt="">
-      <p class="col-md-9 col-sm-12 ">
+      <h5 class="col-md-9 col-sm-12 " style="white-space: pre-line;">
         {{data.chairmanMsg}}
-      </p>
+      </h5>
   </div>
 </section>
     <!----------  ---------------------------- News Component ---------------------------  --------->
@@ -115,19 +115,20 @@ Providing state of the art solutions to complex problems in water research such 
   </div>
 </div>
     <!-- Vision and Mission Tab  -->
-<div class="container-fluid p-5">
-  <h4>Vision and Mission</h4>
-  <div class="text-body line" [style.line-height]="screenWidth<786?'20px':'40px'">
+<div class="p-5">
+  <h3 class="p-4">Vision and Mission</h3>
+  <h4 class="text-body line" style="line-height:40px">
     The mission of ICWaR, is to be a global leader in providing integrated solutions for Water Hazard and Risk Management/ Risk Reduction to improve the quality of life of the Communities.
     <br>
     Our vision is to provide advanced science and technology solutions to the critical issues related to urban floods, riverine floods, water pollution, climate change impacts, and integrated water resources management at different levels with a multi-disciplinary approach, through;<br>
     <ol>
+      <br>
       <li>Assisting government organizations, the public sector and communities in battling the climate change impact on water resources.</li>
       <li>Developing efficient and affordable water remediation techniques to ensure adequate clean drinking water.</li>
       <li>Becoming a global leader in water research, by creating an interdisciplinary research environment and training next-generation water scientists.</li>
       <li>Providing state of the art solutions to complex problems in water research such as urban floods, contamination due to heavy metals and watershed management by developing science-based technological solutions.</li>
     </ol>
-  </div>
+  </h4>
 </div>
 <!-- OutReach -->
 <div class="row m-1 text-center d-flex p-5 justify-content-center align-items-center" style="background-color: rgba(168, 168, 164, 0.279);">
@@ -149,13 +150,14 @@ Providing state of the art solutions to complex problems in water research such 
 <ng-container *ngFor="let News of newsJsonProcessed">
   <div class="modal" id={{removeSpaceFromString(News.title)}}>
     <div class="modal-dialog modal-lg modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
+      <div class="modal-content p-4">
       <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">{{News.title}}</h4>
+          <h5 class="modal-title">{{News.title}}</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <img src={{News.imgSrc}} >
+        <img style="max-height: 400px;" src={{News.imgSrc}} >
+        <a *ngIf="News.redirectTo!=''" href={{News.redirectTo}}><h5>{{News.redirectTo}}</h5></a>
       <!-- Modal footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>

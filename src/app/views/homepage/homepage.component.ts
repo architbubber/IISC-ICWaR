@@ -61,4 +61,5 @@ export interface News{
   title: string;
   imgSrc: string;
   date:string
+  redirectTo:string
 }
