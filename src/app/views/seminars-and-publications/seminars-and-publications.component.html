@@ -1,4 +1,16 @@
-<div class="py-5 container-fluid w-100 align-items-center justify-content-center" style="min-height: 100vh; background-image: url('https://wallpapers.com/images/hd/light-color-background-1eq9mtpjqjz9ddep.jpg');background-repeat: no-repeat;background-size: cover;">
+<i *ngIf="!$('#firstElement').hasClass('appear')" class="fa fa-4x text-white fa-arrow-up" style="position: absolute;right: 5vw;bottom:20%;z-index: 10;"></i>
+<i *ngIf="!$('#lastElement').hasClass('appear')" class="fa fa-4x text-white fa-arrow-down" style="position: absolute;right: 5vw;bottom:10%;z-index: 10;"></i>
+
+<div class="Main screen" style="height: 90vh;overflow:hidden;background-image: url('https://www.casra.ch/wp-content/uploads/2018/11/Images_v007_News_ResearchPapers.jpg');background-color: aqua;background-size: cover;">
+
+  <div class="color-overlay text-white" style="height: 90vh;overflow-y: scroll;">
+
+    <div id="firstElement" class="fullPageDiv fullPageDiv-Content row align-items-center d-flex justify-content-center text-white w-100 h-100 text-center " style="min-height: 100vh;">
+      <div class="decreaseSize bg-transparent justify-content-center d-flex align-items-center" style="background-image: url('https://d13i5xhouzkrd.cloudfront.net/464fa887-737f-4d07-837c-0be4ae2bbd30/previews/output-6.png');background-size: contain;background-repeat: no-repeat;background-position: center;"><img src="https://www.psdstamps.com/wp-content/uploads/2020/03/published-stamp-png.png"></div>
+    </div>
+
+
+<!-- <div class="py-5 container-fluid w-100 align-items-center justify-content-center" style="min-height: 100vh; background-image: url('https://wallpapers.com/images/hd/light-color-background-1eq9mtpjqjz9ddep.jpg');background-repeat: no-repeat;background-size: cover;">
   <h1 class="p-2 px-5 container text-center" style="text-shadow:-10px 10px 10px rgb(109, 105, 108);">Seminars And Publications </h1>
   <div class="text-center text-white container ">Click to view
   <div class="row justify-content-center" >
@@ -8,7 +20,7 @@
       </button>
     </ng-container>
   </div>
-</div>
+</div> -->
 
   <div class="container-md mt-2 justify-content-center">
     <!-- Seminars Card Type -->

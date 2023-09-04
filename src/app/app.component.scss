@@ -2,8 +2,9 @@
   margin-inline: 10px;
 }
 li a{
-  font-weight: bolder;
+  // font-weight: bolder;
   color:white;
+  font-size: 1rem;
   // color: #0e0e0e;
 }
 .text-muted{
@@ -42,13 +43,9 @@ li a{
 	color: black;
 }
 
-.dropdown-item{
-  color: white;
-  text-shadow: none;
-}
-
 .dropdown-item:hover{
-  background-color: rgba(210, 180, 140, 0.833);
+  background-color: #FBEEC1;
+  color: black;
 }
 @media (min-width: 768px) {
   .dropdown:hover .dropdown-menu {

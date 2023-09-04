@@ -43,27 +43,27 @@ export class AppComponent {
 
     // });});
     var count=0
-for(var i =0;i<5;i++){
-  setTimeout(function(){
-      $("h1 span").eq(count).css('animation','highlight 5s');
-    count+=1;
-    console.log(count)
-  },1000*i);}
-    $("h3 span").each(function(index) {
+// for(var i =0;i<5;i++){
+//   setTimeout(function(){
+//       $("h1 span").eq(count).css('animation','highlight 5s');
+//     count+=1;
+//     console.log(count)
+//   },1000*i);}
+    // $("h3 span").each(function(index) {
       // $(this).css('text-shadow', '2px 2px 10px white');
       // $(this).delay(500*index).fadeIn();
-      $(this).delay(600*index).toggle(
-        function(){
-            $(this).animate({
+      // $(this).delay(600*index).toggle(
+      //   function(){
+      //       $(this).animate({
                 // opacity:1,
                 // 'text-shadow':'1px 1px 10px white'
-            }, 800);
+            // }, 800);
 
-  });});
+  // });});
 
-  setTimeout(function(){
-  (<any>$('.start-cover-animation')).hide()},5000);
-    this.state = true;
+  // setTimeout(function(){
+  // (<any>$('.start-cover-animation')).hide()},5000);
+  //   this.state = true;
     //////////////////////////////
   }
   processCoverStirng():string{

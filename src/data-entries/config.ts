@@ -16,11 +16,42 @@
 export const configurations = {
 
   "spreeMailUrl":"https://formspree.io/f/xzblzjgk",
-
+  "colorPallete":[
+    '#8D8741',
+    '#659DBD',
+    '#DAAD86',
+    '#BC986A',
+    '#FBEEC1'
+  ],
   "navbar":{
     'style':{
-      'background-color': 'rgb(6, 127, 178)',
-      'box-shadow': '1px 1px 10px 3px rgb(251, 178, 178)'
+      'background-color': '#659DBD',
+      'box-shadow': '1px 1px 10px 3px #BC986A',
+      'border':'none'
+    },
+    "facultyDropDown":{
+      "style":{
+        'color':'white',
+        'font-size': '1rem',
+        'background-color': '#659DBD',
+        'border-top':'none'
+      }
+    },
+    "eventsDropDown":{
+      "style":{
+        'color':'white',
+        'font-size': '1rem',
+        'background-color': '#659DBD',
+        'border-top':'none'
+      }
+    },
+    "moreDropDown":{
+      "style":{
+        'color':'white',
+        'font-size': '1rem',
+        'background-color': '#659DBD',
+        'border-top':'none'
+      }
     }
   },
 

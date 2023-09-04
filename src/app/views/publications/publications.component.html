@@ -1,0 +1,40 @@
+<div id="Main" class="row justify-content-center d-flex align-items-center bg-white w-100" style="max-width: 100vw;">
+
+  <div class="d-flex mt-5" style="margin-left: 25vw;font-family: LibreBaskerville;width: 100vw;">
+    <h1 class="float-start" style="font-family: LibreBaskerville;">Publications</h1>
+  </div>
+  <hr>
+  <div  class="row d-flex mx-5 p-5">
+
+    <!-- Main Body Start 3 col division -->
+    <div class="col-md-3 d-none d-md-table-row py-5 ps-5 p-2 mt-5" style="width: 20vw;max-height: fit-content;position: sticky;top:0">
+      <h3 class="font-libreBaskerville">Links</h3>
+      <div class="font-libreBaskerville proffesorsSideNavHighlight ps-3" style="line-height: 3em;">
+        <ng-container *ngFor="let item of publications;index as facultyIndex">
+          <a (click)="updateHighlghtedProffName(facultyIndex)" [ngClass]="facultyIndex==0?'font-highlight':null" class="dropdown-item" [href]="'/publications#'+facultyIndex">{{item.name}}</a>
+        </ng-container>
+        <hr>
+    </div>
+    </div>
+
+    <div class="p-5 d-flex row justify-content-center col-md-9 col-sm-12" style="overflow-y: scroll;">
+
+    <div id='Publications' class=" " style="border: #8D8741 solid 1px;">
+      <div class="text-center text-capitalize row  pt-3" style="height: 50px;background-color: #DAAD86;">
+        <div class="col-3">Name</div>
+        <div class="col-4">Title</div>
+        <div class="col-4">Link</div>
+      </div>
+      <ng-container *ngFor="let item of publications;index as facultyIndex">
+        <ng-container *ngFor="let row of item.publicationsList;index as i">
+        <div [id]="i==0?facultyIndex:null"  class="row" style="border: #8D8741 solid 1px;">
+          <div class="border col-4" >{{item.name}}</div>
+            <div class="border col-4 " >{{row.text}}</div>
+            <div class="border col-4"><a [href]="row.links">{{row.links}}</a></div>
+          </div>
+          </ng-container>
+        </ng-container>
+    </div>
+
+  </div>
+</div>

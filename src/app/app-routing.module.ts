@@ -10,6 +10,7 @@ import { SeminarsAndPublicationsComponent } from './views/seminars-and-publicati
 import { WorkshopsAndMeetingsComponent } from './views/workshops-and-meetings/workshops-and-meetings.component';
 import { MonsoonSchoolComponent } from './views/monsoon-school/monsoon-school.component';
 import { GalleryComponent } from './views/gallery/gallery.component';
+import { PublicationsComponent } from './views/publications/publications.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'research', component: ResearchComponent},
+  {path:'publications',component: PublicationsComponent},
   {path: 'events',children:[
     {path:'seminars-and-publications',component: SeminarsAndPublicationsComponent},
     {path:'workshop-and-meetings',component: WorkshopsAndMeetingsComponent},

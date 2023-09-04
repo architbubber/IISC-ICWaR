@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { seminars } from 'src/data-entries/json/Seminars';
 import { publications } from 'src/data-entries/json/publications';
-
+import 'jquery';
 @Component({
   selector: 'app-seminars-and-publications',
   templateUrl: './seminars-and-publications.component.html',
   styleUrls: ['./seminars-and-publications.component.scss']
 })
 export class SeminarsAndPublicationsComponent {
+  $=$;
   typesOfSeminars =  Object.keys(seminars);
   eachSeminarArray :any = Object.values(seminars);
   publications = publications;

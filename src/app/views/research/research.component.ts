@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currChar == loadingPageText.length) {
           clearTimeout(timer);
       }
-      },30)
+      },10)
     }
 
 }

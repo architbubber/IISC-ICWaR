@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
-import { CarouselModule } from 'primeng/carousel';
+import { CarouselModule as pCarouselModule } from 'primeng/carousel';
 
-// import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 import { AboutUsComponent } from './views/about-us/about-us.component';
@@ -20,8 +20,16 @@ import { MonsoonSchoolComponent } from './views/monsoon-school/monsoon-school.co
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { GalleryComponent } from './views/gallery/gallery.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { PublicationsComponent } from './views/publications/publications.component';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CarouselModule,
+    pCarouselModule,
+    TabsModule
+  ],
   declarations: [
     AppComponent,
     HomepageComponent,
@@ -33,15 +41,10 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     SeminarsAndPublicationsComponent,
     WorkshopsAndMeetingsComponent,
     MonsoonSchoolComponent,
-    GalleryComponent
+    GalleryComponent,
+    PublicationsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CarouselModule,
-    TabsModule
-  ],
-  providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
