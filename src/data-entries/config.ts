@@ -15,7 +15,13 @@
 /*******************************************************************************************************************************/
 export const configurations = {
 
+  "global-settings":{
+    "font-family":'Sabon-next-lt',
+    "font-size":'20px'
+  },
+
   "spreeMailUrl":"https://formspree.io/f/xzblzjgk",
+
   "colorPallete":[
     '#8D8741',
     '#659DBD',
@@ -23,34 +29,41 @@ export const configurations = {
     '#BC986A',
     '#FBEEC1'
   ],
+
   "navbar":{
     'style':{
-      'background-color': '#659DBD',
-      'box-shadow': '1px 1px 10px 3px #BC986A',
-      'border':'none'
+      'background-color': 'white',
+      'border':'none',
+      // 'min-height': '10vh',
+      'font-size':'25px'
+    },
+    "navLinks":{
+        // 'font-weight': 'bolder',
+        'color':'white',
+        'background-color': '#739ad9',
     },
     "facultyDropDown":{
       "style":{
         'color':'white',
-        'font-size': '1rem',
-        'background-color': '#659DBD',
-        'border-top':'none'
+        'background-color': '#739ad9',
+        'border-top':'none',
+        'font-size':'25px'
       }
     },
     "eventsDropDown":{
       "style":{
         'color':'white',
-        'font-size': '1rem',
-        'background-color': '#659DBD',
-        'border-top':'none'
+        'background-color': '#739ad9',
+        'border-top':'none',
+        'font-size':'25px'
       }
     },
     "moreDropDown":{
       "style":{
         'color':'white',
-        'font-size': '1rem',
-        'background-color': '#659DBD',
-        'border-top':'none'
+        'background-color': '#739ad9',
+        'border-top':'none',
+        'font-size':'25px'
       }
     }
   },

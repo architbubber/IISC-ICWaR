@@ -20,6 +20,7 @@ export class AppComponent {
   ngOnInit(): void {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+    $('body').css(configurations['global-settings']);
     //Special script to detect click outside nav on nav open
     $(function() {
       $(document).on('click',function (event) {
