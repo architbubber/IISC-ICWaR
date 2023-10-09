@@ -22,17 +22,37 @@
     </h3>
     <a class="d-none d-lg-block col-3" href="#"><img width="150px" src="../assets/images/logo-icwar.png" class="shadow border border-2 border-light " style="border-radius: 5px;"></a>
 
-    <ul class="navbar-nav justify-content-center" [style]="configurations.navbar.navLinks" >
-        <li class="nav-item">
-          <a class="nav-link" href="#" >Home</a>
+    <ul class="navbar-nav justify-content-center" [style]="configurations.navbar.navLinks">
+
+      <ng-container *ngFor="let row of configurations.navbar.navMenu">
+        <li class="nav-item" [ngClass]="row.hasDropdown?'dropdown':null">
+
+          <a *ngIf="!row.hasDropdown" class="nav-link" href={{row.link}}>{{row.name}}</a>
+
+
+          <ng-container *ngIf="row.hasDropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{row.name}}</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" [ngStyle]="row.dropdownStyle">
+            <ng-container *ngFor="let item of row.dropdownItems">
+              <a class="dropdown-item" href={{item.link}}>{{item.name}}</a>
+            </ng-container>
+          </div>
+          </ng-container>
         </li>
-        <li class="nav-item">
+
+      </ng-container>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li> -->
+        <!-- <li class="nav-item">
           <a class="nav-link" href="/research">Research</a>
-        </li>
-        <li class="nav-item">
+        </li> -->
+        <!-- <li class="nav-item">
           <a class="nav-link" href="/null">Collaborations</a>
-        </li>
-        <li class="dropdown nav-item">
+        </li> -->
+        <!-- <li class="dropdown nav-item">
           <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             People
           </a>
@@ -44,10 +64,10 @@
             <a class="dropdown-item " href="/people?type=projectStaff">Project Staff</a>
             <a class="dropdown-item " href="/people?type=officeStaff">Office Staff</a>
           </div>
-        </li>
-        <li class="nav-item">
+        </li> -->
+        <!-- <li class="nav-item">
           <a class="nav-link" href="/publications">Publications</a>
-        </li>
+        </li> -->
         <li class="dropdown nav-item">
           <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Events
