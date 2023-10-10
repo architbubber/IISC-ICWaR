@@ -31,8 +31,12 @@ export const configurations = {
   ],
 
   "navbar":{
+    "navLinksStyle":{
+      'color':'white',
+      'background-color': '#739ad9',
+  },
     'style':{
-      'background-color': 'white',
+      'background-color': '#ffffff',//Color behind IISC And ICWaR Logo
       'border':'none',
       // 'min-height': '10vh',
       'font-size':'25px'
@@ -89,37 +93,60 @@ export const configurations = {
       {
         "name":"Publications",
         "link":"/publications"
+      },
+      {
+        "name":"Events",
+        "hasDropdown":true,
+        "dropdownStyle":{
+          'color':'white',
+          'background-color': '#739ad9',
+          'border-top':'none',
+          'font-size':'25px'
+        },
+        "dropdownItems":[
+          {
+            "name":"Seminars",
+            "link":"/events/seminars-and-publications"
+          },
+          {
+            "name":"Workshops And Meetings",
+            "link":"/events/workshop-and-meetings"
+          },
+          {
+            "name":"Monsoon School",
+            "link":"/events/monsoon-school"
+          }
+        ],
+      },
+      {
+        "name":"More",
+        "hasDropdown":true,
+        "dropdownStyle":{
+          'color':'white',
+          'background-color': '#739ad9',
+          'border-top':'none',
+          'font-size':'25px'
+        },
+        "dropdownItems":[
+          {
+            "name":"Center & Facilities",
+            "link":"/centres-and-facilities"
+          },
+          {
+            "name":"About Us",
+            "link":"/about-us"
+          },
+          {
+            "name":"Contact us",
+            "link":"/contact-us"
+          },
+          {
+            "name":"Gallery",
+            "link":"/gallery"
+          }
+        ],
       }
-    ],
-    "navLinks":{
-        // 'font-weight': 'bolder',
-        'color':'white',
-        'background-color': '#739ad9',
-    },
-    "facultyDropDown":{
-      "style":{
-        'color':'white',
-        'background-color': '#739ad9',
-        'border-top':'none',
-        'font-size':'25px'
-      }
-    },
-    "eventsDropDown":{
-      "style":{
-        'color':'white',
-        'background-color': '#739ad9',
-        'border-top':'none',
-        'font-size':'25px'
-      }
-    },
-    "moreDropDown":{
-      "style":{
-        'color':'white',
-        'background-color': '#739ad9',
-        'border-top':'none',
-        'font-size':'25px'
-      }
-    }
+    ]
   },
 
   "footer":{
