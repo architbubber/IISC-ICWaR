@@ -21,14 +21,14 @@
     </h3>
     <a class="d-none d-lg-block col-3" href="#"><img width="150px" src="../assets/images/logo-icwar.png" class="shadow border border-2 border-light " style="border-radius: 5px;"></a>
 
-    <ul class="navbar-nav justify-content-md-center" [style]="configurations.navbar.navLinksStyle">
+    <ul class="navbar-nav border-1 border-black shadow border justify-content-md-center" [style]="configurations.navbar.navLinksStyle">
 
       <ng-container *ngFor="let row of configurations.navbar.navMenu">
         <li class="nav-item" [ngClass]="row.hasDropdown?'dropdown':null">
           <a *ngIf="!row.hasDropdown" class="nav-link" href={{row.link}}>{{row.name}}</a>
 
           <ng-container *ngIf="row.hasDropdown">
-            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-item nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{row.name}}</a>
               <div class="dropdown-menu pb-0 border border-light" aria-labelledby="navbarDropdown" [ngStyle]="row.dropdownStyle">
                 <ng-container *ngFor="let item of row.dropdownItems;index as index">

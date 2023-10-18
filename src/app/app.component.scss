@@ -24,7 +24,6 @@
       overflow: hidden;
       transform-origin: top center;
       transform: scale(1,0);
-      display: block;
   }
   &:hover {
       .dropdown-menu {
@@ -42,37 +41,11 @@
 }
 
 @media (min-width: 768px) {
-  .dropdown:hover .dropdown-menu {
+  .dropdown-menu {
     display: block;
     /* remove the gap so it doesn't close */
   }
   .auto-map-width{
     width: 70%;
-  }
-}
-
-@keyframes displayRemove{
-  from{
-    // display: inline !important;
-  }
-  to{
-    opacity: 0.6;
-    height: 0vh;
-  }
-}
-
-
-@keyframes highlight{
-  20%{
-    text-shadow: white -4px -1px 10px;
-  }
-    50%{
-    text-shadow: white 2px 2px 10px;
-  }
-    70%{
-    text-shadow: white 2px 1px 5px;
-  }
-  100%{
-    text-shadow:none
   }
 }
