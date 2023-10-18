@@ -25,69 +25,34 @@
 
       <ng-container *ngFor="let row of configurations.navbar.navMenu">
         <li class="nav-item" [ngClass]="row.hasDropdown?'dropdown':null">
-
           <a *ngIf="!row.hasDropdown" class="nav-link" href={{row.link}}>{{row.name}}</a>
-
 
           <ng-container *ngIf="row.hasDropdown">
             <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{row.name}}</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" [ngStyle]="row.dropdownStyle">
-            <ng-container *ngFor="let item of row.dropdownItems">
-              <a class="dropdown-item" href={{item.link}}>{{item.name}}</a>
-            </ng-container>
-          </div>
+              <div class="dropdown-menu pb-0 border border-light" aria-labelledby="navbarDropdown" [ngStyle]="row.dropdownStyle">
+                <ng-container *ngFor="let item of row.dropdownItems;index as index">
+
+                  <a *ngIf="!item.hasSubDropdown" class="dropdown-item p-2" href={{item.link}}>{{item.name}}</a>
+
+                  <div *ngIf="item.hasSubDropdown" class="dropend" >
+                    <a class="p-2 dropdown-item" href={{item.link}}>{{item.name}}</a>
+                    <!-- <ul class="">
+                      <ng-container *ngFor="let subItem of item.subDropdownItems">
+                        <a *ngIf="item.hasSubDropdown"  class="dropdown-item" href={{subItem.link}}>{{subItem.name}}</a>
+                      </ng-container>
+                    </ul> -->
+                  </div>
+
+                  <div *ngIf="index< row.dropdownItems.length-1" class="border-1 border border-light" style="width: 100%;"></div>
+                  </ng-container>
+              </div>
           </ng-container>
+
         </li>
 
       </ng-container>
 
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li> -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="/research">Research</a>
-        </li> -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="/null">Collaborations</a>
-        </li> -->
-        <!-- <li class="dropdown nav-item">
-          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            People
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="text-shadow: none;" [ngStyle]="configurations.navbar.facultyDropDown.style" >
-            <a class="dropdown-item " href="/people?type=faculty">Faculty</a>
-            <a class="dropdown-item " href="/people?type=visitors">Visitors</a>
-            <a class="dropdown-item " href="/people?type=researchStudents">Research Students</a>
-            <a class="dropdown-item " href="/people?type=postDoctoralScholars">Post Doctoral Scholars</a>
-            <a class="dropdown-item " href="/people?type=projectStaff">Project Staff</a>
-            <a class="dropdown-item " href="/people?type=officeStaff">Office Staff</a>
-          </div>
-        </li> -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="/publications">Publications</a>
-        </li> -->
-        <!-- <li class="dropdown nav-item">
-          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Events
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" [ngStyle]="configurations.navbar.eventsDropDown.style" >
-            <a class="dropdown-item " href="/events/seminars-and-publications">Seminars</a>
-            <a class="dropdown-item " href="/events/workshop-and-meetings">Workshop & Meetings</a>
-            <a class="dropdown-item " href="/events/monsoon-school">Monsoon School</a>
-          </div>
-        </li> -->
-        <!-- <li class="dropdown nav-item">
-          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            More
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" [ngStyle]="configurations.navbar.moreDropDown.style" >
-            <a class="dropdown-item " href="/centres-and-facilities">Center & Facilities</a>
-            <a class="dropdown-item " href="/about-us">About Us</a>
-            <a class="dropdown-item " href="/contact-us">Contact Us</a>
-            <a class="dropdown-item " href="/gallery">Gallery</a>
-          </div>
-        </li> -->
         <li class="nav-item">
           <a class="nav-link" onclick="window.open('https://cefirse.ird.fr')" href="">IndoFrench Cell</a>
         </li>

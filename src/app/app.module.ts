@@ -16,11 +16,13 @@ import { ResearchComponent } from './views/research/research.component';
 import { CentresAndFacilitiesComponent } from './views/centres-and-facilities/centres-and-facilities.component';
 import { SeminarsAndPublicationsComponent } from './views/seminars-and-publications/seminars-and-publications.component';
 import { WorkshopsAndMeetingsComponent } from './views/workshops-and-meetings/workshops-and-meetings.component';
-import { MonsoonSchoolComponent } from './views/monsoon-school/monsoon-school.component';
+// import { MonsoonSchoolComponent } from './views/monsoon-school/monsoon-school.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { GalleryComponent } from './views/gallery/gallery.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { PublicationsComponent } from './views/publications/publications.component';
+import { ResearchNewComponent } from './views/research-new/research-new.component';
+import { ActivitiesAndEventsComponent } from './views/activities-and-events/activities-and-events.component';
 
 @NgModule({
   imports: [
@@ -40,9 +42,11 @@ import { PublicationsComponent } from './views/publications/publications.compone
     CentresAndFacilitiesComponent,
     SeminarsAndPublicationsComponent,
     WorkshopsAndMeetingsComponent,
-    MonsoonSchoolComponent,
+    // MonsoonSchoolComponent,
     GalleryComponent,
-    PublicationsComponent
+    PublicationsComponent,
+    ResearchNewComponent,
+    ActivitiesAndEventsComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

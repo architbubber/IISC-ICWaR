@@ -33,7 +33,7 @@ export const configurations = {
   "navbar":{
     "navLinksStyle":{
       'color':'white',
-      'background-color': '#739ad9',
+      'background-color': '#b7d8f3e8',//#b7d8f3e8
   },
     'style':{
       'background-color': '#ffffff',//Color behind IISC And ICWaR Logo
@@ -47,21 +47,17 @@ export const configurations = {
         "link":"#"
       },
       {
-        "name":"Research",
-        "link":"/research"
-      },
-      {
         "name":"People",
         "hasDropdown":true,
         "dropdownStyle":{
-          'color':'white',
-          'background-color': '#739ad9',
-          'border-top':'none',
+          'color':'#fefefe',
+          'background-color': '#a23838f9',//#8d4736ff
           'font-size':'25px'
         },
         "dropdownItems":[
           {
             "name":"Faculty",
+            "hasSubDropdown":false,
             "link":"/people?type=faculty"
           },
           {
@@ -87,30 +83,46 @@ export const configurations = {
         ],
       },
       {
-        "name":"Collaborations",
-        "link":"/Collaborations"
+        "name":"Research",
+        "link":"/research"
       },
       {
         "name":"Publications",
         "link":"/publications"
       },
       {
-        "name":"Events",
+        "name":"Activities & Events",
         "hasDropdown":true,
         "dropdownStyle":{
           'color':'white',
-          'background-color': '#739ad9',
+          'background-color': '#a23838f9',
           'border-top':'none',
           'font-size':'25px'
         },
         "dropdownItems":[
           {
-            "name":"Seminars",
-            "link":"/events/seminars-and-publications"
-          },
-          {
-            "name":"Workshops And Meetings",
-            "link":"/events/workshop-and-meetings"
+            "name":"Workshops And Short Courses",
+            "link":"/events/workshop-and-meetings",
+            "hasSubDropdown":true,
+            "dropdownStyle":{
+              'color':'white',
+              'background-color': '#a23838f9',
+              'border-top':'none',
+              'font-size':'25px'
+            },
+            "subDropdownItems":[
+              {
+                "name":"Seminars",
+                "link":"/events/seminars-and-publications"
+              },
+              {
+                "name":"Meetings",
+                "link":"/events/workshop-and-meetings"
+              },
+              {
+                "name":"Outreach",
+                "link":"/event"
+              }]
           },
           {
             "name":"Monsoon School",
@@ -119,30 +131,26 @@ export const configurations = {
         ],
       },
       {
-        "name":"More",
+        "name":"About",
         "hasDropdown":true,
         "dropdownStyle":{
           'color':'white',
-          'background-color': '#739ad9',
+          'background-color': '#a23838f9',
           'border-top':'none',
           'font-size':'25px'
         },
         "dropdownItems":[
           {
-            "name":"Center & Facilities",
-            "link":"/centres-and-facilities"
-          },
-          {
-            "name":"About Us",
+            "name":"History",
             "link":"/about-us"
           },
           {
-            "name":"Contact us",
-            "link":"/contact-us"
+            "name":"Program",
+            "link":"/hw"
           },
           {
-            "name":"Gallery",
-            "link":"/gallery"
+            "name":"Infrastructure",
+            "link":"/centres-and-facilities"
           }
         ],
       }
@@ -151,7 +159,9 @@ export const configurations = {
 
   "footer":{
     "style":{
-       "background-color": "#0e0e0e",
+      //  "background-color": "#0e0e0e",
+       "background-color": "#08394f",
+       "color":"red"
     }
   }
 }
