@@ -91,5 +91,17 @@ export class PeopleComponent {
   getValuesFromJson(data:any){
     return <[]>Object.values(data);
   }
+
+  getTitleFromType(type:string){
+
+    var ans='';
+
+    type.split(/(?=[A-Z])/).forEach(f=>{
+      ans += f.charAt(0).toUpperCase()+f.slice(1) +' ';
+      }
+    )
+
+    return ans;
+  }
 }
 
