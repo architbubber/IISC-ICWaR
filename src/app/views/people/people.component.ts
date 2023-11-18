@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { faculty,visitors,researchStudents,projectStaff, officeStaff, postDoctoralScholars } from 'src/data-entries/json/people';
 import 'jquery';
 
@@ -15,7 +15,9 @@ export class PeopleComponent {
   type : string = '';
   dataType: string ='';
 
-  constructor(private route: ActivatedRoute){}
+  constructor(private route: ActivatedRoute,private router: Router){
+    console.log("Now")
+  }
 
   designationNames: string[]=[];
 
@@ -25,7 +27,10 @@ export class PeopleComponent {
     // (<any>$('#search-bar')).css('margin-left',dist+'px');
     // $.getScript('//cdn.jsdelivr.net/isotope/1.5.25/jquery.isotope.min.js',function(){
 
-    this.type = <string>this.route.snapshot.queryParamMap.get('type');
+    console.log(this.route.snapshot);
+    // this.type = <string>this.route.snapshot.queryParamMap.get('type');
+    this.type = <string>this.router.url.split('/').pop();
+
     let filterBy = this.route.snapshot.queryParamMap.get('filterBy');
 
     switch(this.type){

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { configurations } from 'src/data-entries/config';
 import { publications } from 'src/data-entries/json/publications';
 
 @Component({
@@ -11,21 +12,24 @@ export class PublicationsComponent {
   topOffSet :any;
   publications = publications;
 
-  ngAfterViewInit(){
-    this.topOffSet = $('#0').offset()?.top;
-    // setInterval(()=>{
-    // $('#Publications .row').children().each((index,elem)=>{
-    //   console.log((<any>$(elem)));
-    //   if((<any>$(elem)).offset().top <= this.topOffSet){
-    //     (<any>$(elem)).fadeToggle();
-    //   }
-    //   else{
-    //     (<any>$(elem)).show();
-    //   }
-    // });},1);
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+
+    this.getKeysOfJson(configurations['publications']).forEach(key=>{
+      $('body').css(key,"unset");
+    })
+
+    $('body').css('global-configurations');
+
   }
 
-  getKeysOfJson(data:any){
+  ngAfterViewInit(){
+    this.topOffSet = $('#0').offset()?.top;
+    $('body').css(configurations['publications']);
+  }
+
+  getKeysOfJson(data:any):string[]{
     return Object.keys(data);
   }
   returnJsonOfKey(data:{},key:string){

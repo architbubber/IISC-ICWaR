@@ -21,7 +21,7 @@
 .dropdown {
   .dropdown-menu {
       transition: all 0.5s;
-      overflow: hidden;
+      // overflow: hidden;
       transform-origin: top center;
       transform: scale(1,0);
   }
@@ -49,3 +49,29 @@
     width: 70%;
   }
 }
+
+p :nth-last-child(0){
+  content: "Archit Bubber";
+  color: #e9e8e4;
+}
+// Sub dropdown code Beta //////////////
+
+.dropdown-submenu:hover + .dropdown-menu ,.dropdown-submenu + .dropdown-menu:hover {
+    display: block;
+}
+
+@media (min-width:768px) {
+  .dropdown-submenu + .dropdown-menu {
+    position:absolute;
+    display: none;
+    overflow: visible;
+    transform-origin:unset;
+    transform: scale(0,0);
+    left: 100%;
+    margin-top: -15%;
+    margin-left: -1px;
+
+  }
+}
+
+

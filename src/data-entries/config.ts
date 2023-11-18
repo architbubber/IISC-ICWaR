@@ -17,7 +17,7 @@ export const configurations = {
 
   "global-settings":{
     "font-family":'Sabon-next-lt',
-    "font-size":'15px'
+    "font-size":'1.5rem'
   },
 
   "spreeMailUrl":"https://formspree.io/f/xzblzjgk",
@@ -44,7 +44,7 @@ export const configurations = {
     "navMenu":[
       {
         "name":"Home",
-        "link":"#"
+        "link":"/"
       },
       {
         "name":"People",
@@ -57,28 +57,28 @@ export const configurations = {
         "dropdownItems":[
           {
             "name":"Faculty",
-            "hasSubDropdown":false,
-            "link":"/people?type=faculty"
+            "link":"/people/faculty",
+            "hasSubDropdown":false
           },
           {
             "name":"Visitors",
-            "link":"/people?type=visitors"
+            "link":"/people/visitors"
           },
           {
             "name":"Research Students",
-            "link":"/people?type=researchStudents"
+            "link":"/people/researchStudents"
           },
           {
             "name":"Post Doctoral Scholars",
-            "link":"/people?type=postDoctoralScholars"
+            "link":"/people/postDoctoralScholars"
           },
           {
             "name":"Project Staff",
-            "link":"/people?type=projectStaff"
+            "link":"/people/projectStaff"
           },
           {
             "name":"Office Staff",
-            "link":"/people?type=officeStaff"
+            "link":"/people/officeStaff"
           },
         ],
       },
@@ -127,7 +127,37 @@ export const configurations = {
           {
             "name":"Monsoon School",
             "link":"/events/monsoon-school"
-          }
+          },
+          {
+            "name":"Student Seminar Series",
+            "link":"/students-corner"
+          },
+          {
+            'name':'Gallery',
+            'link':'/gallery',
+            "hasSubDropdown":true,
+            "subDropdownItems":[
+            {
+              "name":"Fresher’s Day 2022 – Gallery",
+              "link":"none"
+            },
+            {
+              "name":"Open Day: ICWaR",
+              "link":"none"
+            },
+            {
+              "name":"Open Day, 2020",
+              "link":"none"
+            },
+            {
+              "name":"Open Day, 2019",
+              "link":"none"
+            }],
+          },
+          {
+            "name":"Outreach",
+            "link":"none"
+          },
         ],
       },
       {
@@ -146,15 +176,24 @@ export const configurations = {
           },
           {
             "name":"Program",
-            "link":"/hw"
+            "link":"/program"
           },
           {
             "name":"Infrastructure",
             "link":"/centres-and-facilities"
+          },
+          {
+            'name':'Admissions',
+            'link':'/redirect_initiated',
+            'redirect':'https://iisc.ac.in/admissions/'
           }
         ],
       }
     ]
+  },
+  //Page specific Settings
+  "publications":{
+    "font-size":"",
   },
 
   "footer":{

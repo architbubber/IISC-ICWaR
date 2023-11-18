@@ -1,17 +1,10 @@
-<!-- On Load Animation-->
-<!-- <div class="start-cover-animation justify-content-center align-items-center" style="max-width: 100%;">
-  <div class="row justify-content-center align-items-center" >
-    <h1 class="text-each-letter-fade text-center col-12">ICWaR</h1>
-    <h3 class="text-each-letter-fade text-center col-12" >Interdisciplinary Centre for Water Research(ICWaR)</h3>
-  </div>
-</div> -->
 <!--  ---------NavBar-----------  -->
 <nav id="nav" class="navbar navbar-expand-lg px-2" style="padding-bottom: 0;">
   <!-- <div [ngClass]="screenWidth<786?'d-inline-flex':'container-fluid'"> -->
     <button class="navbar-toggler float-right" style="box-shadow: 1px 1px 5px 1px rgba(0, 166, 255, 0.482);" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="d-lg-none d-sm-grid" href="#"><img width="150px" src="../assets/images/logo-icwar.png" class="shadow border border-2 border-light " style="border-radius: 5px;"></a>
+    <a class="d-lg-none d-sm-grid" href="#"><img width="150px" src="assets/images/logo-icwar.png" class="shadow border border-2 border-light " style="border-radius: 5px;"></a>
   <!-- </div> -->
   <div class="text-md-center ps-md-0 ps-2 row collapse navbar-collapse " id="navbarSupportedContent" [style]="configurations.navbar.style">
 
@@ -21,28 +14,28 @@
     </h3>
     <a class="d-none d-lg-block col-3" href="#"><img width="150px" src="../assets/images/logo-icwar.png" class="shadow border border-2 border-light " style="border-radius: 5px;"></a>
 
-    <ul class="navbar-nav border-1 border-black shadow border justify-content-md-center" [style]="configurations.navbar.navLinksStyle">
+    <ul class="navbar-nav border-1 border-black shadow border justify-content-center  justify-content-lg-evenly px-5 " [style]="configurations.navbar.navLinksStyle">
 
       <ng-container *ngFor="let row of configurations.navbar.navMenu">
         <li class="nav-item" [ngClass]="row.hasDropdown?'dropdown':null">
-          <a *ngIf="!row.hasDropdown" class="nav-link" href={{row.link}}>{{row.name}}</a>
+          <a *ngIf="!row.hasDropdown" class="nav-link" routerLink={{row.link}}>{{row.name}}</a>
 
           <ng-container *ngIf="row.hasDropdown">
             <a class="nav-item nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{row.name}}</a>
-              <div class="dropdown-menu pb-0 border border-light" aria-labelledby="navbarDropdown" [ngStyle]="row.dropdownStyle">
+              <div class="dropdown-menu pb-0 border border-light" [ngClass]="screenWidth>768?'dropend':null" aria-labelledby="navbarDropdown" [ngStyle]="row.dropdownStyle">
                 <ng-container *ngFor="let item of row.dropdownItems;index as index">
 
-                  <a *ngIf="!item.hasSubDropdown" class="dropdown-item p-2" href={{item.link}}>{{item.name}}</a>
+                  <a *ngIf="!item.hasSubDropdown" class="dropdown-item p-2" routerLink={{item.link}} (click)="getRedirectLink(item)!=null?goToUrl(getRedirectLink(item)):null">{{item.name}}</a>
 
-                  <div *ngIf="item.hasSubDropdown" class="dropend" >
-                    <a class="p-2 dropdown-item" href={{item.link}}>{{item.name}}</a>
-                    <!-- <ul class="">
-                      <ng-container *ngFor="let subItem of item.subDropdownItems">
-                        <a *ngIf="item.hasSubDropdown"  class="dropdown-item" href={{subItem.link}}>{{subItem.name}}</a>
+                  <ng-container *ngIf="item.hasSubDropdown">
+                    <a class="p-2 dropdown-item dropdown-submenu dropdown-toggle" routerLink={{item.link}} >{{item.name}}</a>
+                    <ul class="dropdown-menu " [ngStyle]="row.dropdownStyle">
+                      <ng-container *ngFor="let subItem of getSubDropDownList(item)">
+                        <li class="dropdown-item" routerLink={{subItem.link}}>{{subItem.name}}</li>
                       </ng-container>
-                    </ul> -->
-                  </div>
+                    </ul>
+                  </ng-container>
 
                   <div *ngIf="index< row.dropdownItems.length-1" class="border-1 border border-light" style="width: 100%;"></div>
                   </ng-container>
@@ -96,7 +89,7 @@
 
   <p class="mb-0 p-3 text-muted" style="text-align:left;" [style.font-size]="screenWidth<768?'xx-small':'x-small'">
     Copyright © 2023 ICWaR, IISC
-    <span style="float:right;">
+    <span style="float:right;" class="d-none">
         Designed by Archit R Bubber.
     </span>
   </p>

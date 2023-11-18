@@ -33,7 +33,14 @@ export class AppComponent {
       });
     });
 
-
   }
-
+  getSubDropDownList(subDropdownItems:any){
+    return subDropdownItems["subDropdownItems"];
+  }
+  getRedirectLink(item:any){
+    return item['redirect'];
+  }
+  goToUrl(url:string): void {
+    window.location.href = url;
+}
 }

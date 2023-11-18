@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './views/homepage/homepage.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
@@ -12,10 +11,21 @@ import { WorkshopsAndMeetingsComponent } from './views/workshops-and-meetings/wo
 import { GalleryComponent } from './views/gallery/gallery.component';
 import { PublicationsComponent } from './views/publications/publications.component';
 import { ActivitiesAndEventsComponent } from './views/activities-and-events/activities-and-events.component';
+import { HomepageComponent } from './views/homepage/homepage.component';
+import { ProgramsComponent } from './views/programs/programs.component';
+import { PeopleComponent } from './views/people/people.component';
 
 const routes: Routes = [
-  {path: '', component: ActivitiesAndEventsComponent},
-  {path: 'people',loadChildren:()=>import('./views/people/people.module').then(m=>m.PeopleModule)},
+  {path: '', component: HomepageComponent},
+  {
+    path: 'people',
+    component:PeopleComponent,
+    children: [
+    {
+      path:'**',loadChildren:()=>import('./views/people/people.module').then(m=>m.PeopleModule)
+    }
+  ]
+  },
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'research', component: ResearchNewComponent},
@@ -28,13 +38,13 @@ const routes: Routes = [
   },
   {path: 'centres-and-facilities', component: CentresAndFacilitiesComponent},
   {path: 'gallery', component: GalleryComponent},
+  {path: 'program', component:ProgramsComponent},
   {path:'**',component:PageNotFoundComponent}
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  providers: []
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
