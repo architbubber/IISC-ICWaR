@@ -1,25 +1,21 @@
-.custom-card{
-  padding: 20px;
-  background-color: rgb(252, 252, 252);
-  img{
-  width: 300px;
-  margin:5px
-  }
-  margin:10px;
-  .card-text{
-    .col-12{
-      margin:0;
-    }
-    font-family: Numans;
-  }
+button.btn.btn-text-expand.collapsed:before
+{
+    content:'..Read more' ;
+    display: block;
+    width: 100px;
 }
-.font-libreBaskerville{
-  font-family: LibreBaskerville;
-  a{
-    font-family: LibreBaskerville;
-    font-size: 1.1em;
-  }
+button.btn.btn-text-expand:before
+{
+    content:'Read less' ;
+    display: block;
+    width: 100px;
 }
+// li>a.nav-link{
+//   transition: 1s;
+// &:hover{
+//   text-decoration: underline;
+// }
+// }
 .font-highlight{
   color: #a00404;
 }
@@ -31,20 +27,41 @@ div.d-flex{
   max-width: 100%;
 }
 .fa-phone,.fa-envelope{
-  color: #a17e26;
+  color: #0949ca;
 }
 *{
   overflow-x: hidden;
 }
-@media(min-width:768px){
 
-  html{
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-  ::-webkit-scrollbar {
-    display: none;/* Hide scrollbar for Chrome, Safari and Opera */
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
-  }
+
+// html{
+//   -ms-overflow-style: none;  /* IE and Edge */
+//   scrollbar-width: none;  /* Firefox */
+// }
+// ::-webkit-scrollbar {
+//   display: none;/* Hide scrollbar for Chrome, Safari and Opera */
+//   width: 0px;
+//   background: transparent; /* make scrollbar transparent */
+// }
+
+.nav-link {
+  // display: inline-block;
+  position: relative;
+  // color: #0087ca;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #030303;
+  transform-origin: bottom left;
+  transition: transform 0.5s;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

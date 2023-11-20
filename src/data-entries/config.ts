@@ -32,12 +32,17 @@ export const configurations = {
 
   "navbar":{
     "navLinksStyle":{
+      'text-shadow':'1px 0px black',
       'color':'white',
-      'background-color': '#b7d8f3e8',//#b7d8f3e8
+      'background-color': '#0b8dd9b9',//#b7d8f3e8
   },
     'style':{
       'background-color': '#ffffff',//Color behind IISC And ICWaR Logo
-      'border':'none',
+      // 'border':'solid 5px black',
+      // 'position':'fixed',
+      // 'top':'0',
+      // 'z-index':'100',
+      // 'box-shadow':'1px 2px 10px black',
       // 'min-height': '10vh',
       'font-size':'25px'
     },
@@ -186,6 +191,29 @@ export const configurations = {
             'name':'Admissions',
             'link':'/redirect_initiated',
             'redirect':'https://iisc.ac.in/admissions/'
+          },{
+            'name':"Contact Us",
+            'link':'/contact-us'
+          }
+        ],
+      },
+      {
+        "name":"Students Corner",
+        "hasDropdown":true,
+        "dropdownStyle":{
+          'color':'white',
+          'background-color': '#a23838f9',
+          'border-top':'none',
+          'font-size':'25px'
+        },
+        "dropdownItems":[
+          {
+            "name":"Blogs",
+            "link":"/students-blogs"
+          },
+          {
+            "name":"Testimonials",
+            "link":"/null"
           }
         ],
       }

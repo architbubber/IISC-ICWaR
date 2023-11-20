@@ -10,4 +10,4 @@ import { PeopleRoutingModule } from './people-routing.module';
   ],
   declarations: [PeopleComponent]
 })
-export class PeopleModule { }
+export class PeopleModule {}

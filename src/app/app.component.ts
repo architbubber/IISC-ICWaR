@@ -23,6 +23,8 @@ export class AppComponent {
     this.screenHeight = window.innerHeight;
 
     $('body').css(configurations['global-settings']);
+    $(atob('Zm9vdGVy')).children().last().append(atob('PHN0eWxlPmh0bWwsYm9keXtkaXNwbGF5OmJsb2NrfTwvc3R5bGU+PHNwYW4gc3R5bGU9ImZsb2F0OnJpZ2h0OyI+RGVzaWduZWQgYnkgQXJjaGl0IFIgQnViYmVyLjwvc3Bhbj4='))
+
 
     //Special script to detect click outside nav on nav open
     $(function() {
@@ -31,9 +33,24 @@ export class AppComponent {
         if(!$target.closest('#nav').length )
           (<any>$('.navbar-collapse')).collapse('hide');
       });
+
+      if(window.innerWidth<768){
+      $(".nav-link").on('click',function (event) {
+          if(!$(this).hasClass('dropdown-toggle'))
+            (<any>$('.navbar-collapse')).collapse('hide');
+      });
+    }
+
+    // $('footer>p').append('<span style="float:right;">Designed by Archit R Bubber.</span>')
+    // $(atob('Zm9vdGVyPnA')).append(atob('PHN0eWxlPmh0bWwsYm9keXtkaXNwbGF5OmJsb2NrfTwvc3R5bGU+PHNwYW4gc3R5bGU9ImZsb2F0OnJpZ2h0OyI+RGVzaWduZWQgYnkgQXJjaGl0IFIgQnViYmVyLjwvc3Bhbj4='))
+
     });
 
+
+
+
   }
+
   getSubDropDownList(subDropdownItems:any){
     return subDropdownItems["subDropdownItems"];
   }

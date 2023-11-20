@@ -1,5 +1,5 @@
 <!--  ---------NavBar-----------  -->
-<nav id="nav" class="navbar navbar-expand-lg px-2" style="padding-bottom: 0;">
+<nav id="nav" class="navbar navbar-expand-lg px-2" style="padding-bottom: 0;max-width: 100vw;">
   <!-- <div [ngClass]="screenWidth<786?'d-inline-flex':'container-fluid'"> -->
     <button class="navbar-toggler float-right" style="box-shadow: 1px 1px 5px 1px rgba(0, 166, 255, 0.482);" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -8,38 +8,39 @@
   <!-- </div> -->
   <div class="text-md-center ps-md-0 ps-2 row collapse navbar-collapse " id="navbarSupportedContent" [style]="configurations.navbar.style">
 
-    <a class="d-none d-lg-block col-3" href="#"><img width="150px" src="../assets/images/logo-iisc.png" class="bg-white"></a>
-    <h3 class="d-none d-lg-block align-self-center col-6">
-      Interdisciplinary Centre for Water Research (ICWaR) <br> IISc Bangalore
-    </h3>
-    <a class="d-none d-lg-block col-3" href="#"><img width="150px" src="../assets/images/logo-icwar.png" class="shadow border border-2 border-light " style="border-radius: 5px;"></a>
+    <a class="d-none d-lg-block col-3" href="#"><img width="150px" src="../assets/images/logo-iisc.png"></a>
+    <h2 class="d-none d-lg-block align-self-center col-6 text-body-emphasis" style="font-weight: 1000;text-shadow: 1px 0px black;">
+      Interdisciplinary Centre for Water Research (ICWaR), IISc Bangalore
+    </h2>
+    <a class="d-none d-lg-block col-3" href="#"><img width="200px" src="../assets/images/logo-icwar.png" class="shadow border border-2 border-light " style="border-radius: 5px;"></a>
 
-    <ul class="navbar-nav border-1 border-black shadow border justify-content-center  justify-content-lg-evenly px-5 " [style]="configurations.navbar.navLinksStyle">
+    <ul class="navbar-nav border-0 border-dark border justify-content-center justify-content-lg-evenly " [style]="configurations.navbar.navLinksStyle">
 
       <ng-container *ngFor="let row of configurations.navbar.navMenu">
         <li class="nav-item" [ngClass]="row.hasDropdown?'dropdown':null">
           <a *ngIf="!row.hasDropdown" class="nav-link" routerLink={{row.link}}>{{row.name}}</a>
 
           <ng-container *ngIf="row.hasDropdown">
-            <a class="nav-item nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{row.name}}</a>
-              <div class="dropdown-menu pb-0 border border-light" [ngClass]="screenWidth>768?'dropend':null" aria-labelledby="navbarDropdown" [ngStyle]="row.dropdownStyle">
+              <ul class="dropdown-menu pb-0 border border-light" [ngClass]="screenWidth>768?'dropend':null" aria-labelledby="navbarDropdown" [ngStyle]="row.dropdownStyle">
                 <ng-container *ngFor="let item of row.dropdownItems;index as index">
 
-                  <a *ngIf="!item.hasSubDropdown" class="dropdown-item p-2" routerLink={{item.link}} (click)="getRedirectLink(item)!=null?goToUrl(getRedirectLink(item)):null">{{item.name}}</a>
+                  <a *ngIf="!item.hasSubDropdown" class="dropdown-item p-2 nav-link" routerLink={{item.link}} (click)="getRedirectLink(item)!=null?goToUrl(getRedirectLink(item)):null">{{item.name}}</a>
 
                   <ng-container *ngIf="item.hasSubDropdown">
-                    <a class="p-2 dropdown-item dropdown-submenu dropdown-toggle" routerLink={{item.link}} >{{item.name}}</a>
-                    <ul class="dropdown-menu " [ngStyle]="row.dropdownStyle">
-                      <ng-container *ngFor="let subItem of getSubDropDownList(item)">
-                        <li class="dropdown-item" routerLink={{subItem.link}}>{{subItem.name}}</li>
+                    <a class="p-2 dropdown-item dropdown-submenu dropdown-toggle " routerLink={{item.link}} >{{item.name}}</a>
+                    <ul class="dropdown-menu pb-0 border border-light" [ngStyle]="row.dropdownStyle">
+                      <ng-container *ngFor="let subItem of getSubDropDownList(item);index as subItemIndex">
+                        <li class="dropdown-item nav-link " routerLink={{subItem.link}}>{{subItem.name}}</li>
+                        <div *ngIf="subItemIndex < getSubDropDownList(item).length-1" class="border-1 border border-light" style="width: 100%;"></div>
                       </ng-container>
                     </ul>
                   </ng-container>
 
                   <div *ngIf="index< row.dropdownItems.length-1" class="border-1 border border-light" style="width: 100%;"></div>
                   </ng-container>
-              </div>
+                </ul>
           </ng-container>
 
         </li>
@@ -54,7 +55,6 @@
 </nav>
 <!--  --------------------  -->
 <router-outlet></router-outlet>
-
 <!-- ---------Footer -------------- -->
 <footer class="w-100 text-white footer p-4" [ngStyle]="configurations.footer.style" style="border-top: 1px solid rgb(205, 14, 27);width: 100vw;">
   <!-- <h5>ICWaR, IIsc</h5> -->
@@ -90,7 +90,7 @@
   <p class="mb-0 p-3 text-muted" style="text-align:left;" [style.font-size]="screenWidth<768?'xx-small':'x-small'">
     Copyright © 2023 ICWaR, IISC
     <span style="float:right;" class="d-none">
-        Designed by Archit R Bubber.
+        <!-- Designed by Archit R Bubber. -->
     </span>
   </p>
 </footer>

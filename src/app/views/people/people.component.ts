@@ -60,7 +60,7 @@ export class PeopleComponent {
         break;
     }
 
-  $('.facultySideNavHighlight').children().each( (index, element) => {
+  $('.facultySideNavHighlight>li').children().each( (index, element) => {
     if(element.textContent?.replaceAll(' ','').toUpperCase() == this.type.toUpperCase())
       $(element).addClass('font-highlight');
     else

@@ -17,15 +17,13 @@ import { PeopleComponent } from './views/people/people.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
-  {
-    path: 'people',
-    component:PeopleComponent,
-    children: [
-    {
-      path:'**',loadChildren:()=>import('./views/people/people.module').then(m=>m.PeopleModule)
-    }
-  ]
-  },
+
+  {path: 'people/faculty',loadChildren:()=>import('./views/people/people.module').then(m=>m.PeopleModule)},
+  {path: 'people/visitors',loadChildren:()=>import('./views/people/people.module').then(m=>m.PeopleModule)},
+  {path: 'people/researchStudents',loadChildren:()=>import('./views/people/people.module').then(m=>m.PeopleModule)},
+  {path: 'people/postDoctoralScholars',loadChildren:()=>import('./views/people/people.module').then(m=>m.PeopleModule)},
+  {path: 'people/projectStaff',loadChildren:()=>import('./views/people/people.module').then(m=>m.PeopleModule)},
+  {path: 'people/officeStaff',loadChildren:()=>import('./views/people/people.module').then(m=>m.PeopleModule)},
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'research', component: ResearchNewComponent},
